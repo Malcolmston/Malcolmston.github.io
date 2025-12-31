@@ -13,6 +13,7 @@ interface CardProps {
     shape?: Shape;
     headerPosition?: Position;
     icon?: React.ReactNode;
+    children?: React.ReactNode;
 }
 
 /**
@@ -28,7 +29,7 @@ interface CardProps {
  *
  * @return {JSX.Element} The rendered Card component.
  */
-export default function Card({title, description, size = Size.Medium, shape = Shape.Rectangle, headerPosition = Position.Top, icon}: CardProps) {
+export default function Card({title, description, size = Size.Medium, shape = Shape.Rectangle, headerPosition = Position.Top, icon, children}: CardProps) {
     // Size and shape based dimension classes
     const dimensionClasses = {
         square: {
@@ -37,14 +38,14 @@ export default function Card({title, description, size = Size.Medium, shape = Sh
             large: 'w-[350px] h-[350px]'
         },
         rectangle: {
-            small: 'w-[200px] h-[120px]',
-            medium: 'w-[280px] h-[160px]',
-            large: 'w-[350px] h-[200px]'
+            small: 'w-[200px] min-h-[120px]',
+            medium: 'w-[280px] min-h-[140px]',
+            large: 'w-[350px] min-h-[160px]'
         },
         long: {
-            small: 'w-full min-h-[100px]',
-            medium: 'w-full min-h-[140px]',
-            large: 'w-full min-h-[180px]'
+            small: 'w-full min-h-[80px]',
+            medium: 'w-full min-h-[100px]',
+            large: 'w-full min-h-[120px]'
         }
     };
 
@@ -96,6 +97,7 @@ export default function Card({title, description, size = Size.Medium, shape = Sh
             hover:shadow-[inset_8px_8px_16px_rgba(0,0,0,0.6),inset_-8px_-8px_16px_rgba(255,255,255,0.05)]
             transition-all duration-300
             border border-white/5
+            overflow-hidden
             ${paddingClasses[size]}
             ${dimensionClasses[shape][size]}
         `}>
@@ -115,6 +117,11 @@ export default function Card({title, description, size = Size.Medium, shape = Sh
                         <p className={`text-neutral-400 ${descriptionSizeClasses[size]} leading-relaxed`}>
                             {description}
                         </p>
+                    )}
+                    {children && (
+                        <div className="mt-4">
+                            {children}
+                        </div>
                     )}
                 </div>
             </div>
