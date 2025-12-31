@@ -4,7 +4,7 @@ import Card from "@/app/components/card";
 import Size from "@/app/components/size";
 import Shape from "@/app/components/shape";
 import Possition from "@/app/components/possition";
-import {blob} from "node:stream/consumers";
+import Image from 'next/image';
 
 export default function About() {
     const download = () => {
@@ -33,9 +33,13 @@ export default function About() {
             <div className="flex flex-col gap-6">
                 {/* Profile Section with Image */}
                 <div className="flex flex-col md:flex-row gap-6 items-start">
-                    <div className="w-48 h-48 rounded-2xl bg-neutral-800 flex items-center justify-center text-neutral-600 flex-shrink-0">
-                        <span className="text-sm">Profile Photo</span>
-                    </div>
+                    <Image
+                        src="/malcolm.png"
+                        alt="Malcolm Stone"
+                        width={192}
+                        height={192}
+                        className="w-48 h-48 rounded-2xl border-2 border-neutral-700 object-cover flex-shrink-0"
+                    />
                     <Card
                         size={Size.Medium}
                         shape={Shape.Long}
