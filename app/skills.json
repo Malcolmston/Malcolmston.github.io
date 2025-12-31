@@ -15,7 +15,12 @@
     "name": "c++"
   },
   {
-    "name": "c#"
+    "name": "c#",
+    "frameworks": [
+      "unity",
+      ".NET",
+      ".NET Core"
+    ]
   },
   {
     "name": "python"
