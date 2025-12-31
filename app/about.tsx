@@ -163,14 +163,40 @@ export default function About() {
                         headerPosition={Possition.Top}
                         title="10+"
                         description="Projects Built"
-                    />
+                    >
+                        <div>
+                            <ul className="list-none list-inside text-neutral-300 space-x-0.5 space-y-0.5 text-sm">
+                                <li>Web Apps</li>
+                                <li>DevOps Automation</li>
+                                <li>Tools</li>
+                                <li>Learning Resources</li>
+                                <li>Open Source Contributions</li>
+                                <li>Tutorials</li>
+                                <li>CI/CD</li>
+                            </ul>
+                        </div>
+                    </Card>
                     <Card
                         size={Size.Medium}
                         shape={Shape.Square}
                         headerPosition={Possition.Top}
                         title="9+"
                         description="Languages"
-                    />
+
+                    >
+                        <div>
+                            <ul className="list-none list-inside text-neutral-300 space-x-0.5 space-y-0.5 text-sm">
+                                <li>JavaScript</li>
+                                <li>TypeScript</li>
+                                <li>Python</li>
+                                <li>SQL</li>
+                                <li>C#</li>
+                                <li>Java</li>
+                                <li>PHP</li>
+                                <li>Go</li>
+                            </ul>
+                        </div>
+                        </Card>
                     <Card
                         size={Size.Medium}
                         shape={Shape.Square}
@@ -193,7 +219,7 @@ export default function About() {
                     shape={Shape.Long}
                     headerPosition={Possition.Left}
                     title="Currently"
-                    description="Pursuing a dual degree at Rollins College while building innovative projects and contributing to the STEM Student Council. Always exploring new technologies and methodologies to create better, more accessible software solutions."
+                    description="Currently apart of the STEM Student Council; always exploring new technologies and methodologies to create better, more accessible software solutions."
                 />
 
                 <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300" onClick={download}>Download Resume</button>
