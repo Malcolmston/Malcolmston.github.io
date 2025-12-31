@@ -2,8 +2,8 @@
 
 import { useRef } from "react";
 import Head from "@/app/components/head";
-import Card from "@/app/components/card";
 import About from "@/app/about";
+import Projects from "@/app/projects";
 
 function RadialHoverBackground({children}) {
     const ref = useRef<HTMLDivElement>(null);
@@ -48,7 +48,7 @@ export default function Home () {
     return <>
         <RadialHoverBackground>
             {/* Liquid Glass Header */}
-            <Head person="Malcolm stone" tabs={[
+            <Head person="Malcolm Stone" tabs={[
                 {name: "About"},
                 {name: "Projects"},
                 {name: "Skills"},
@@ -65,6 +65,8 @@ export default function Home () {
                     {/* Neumorphic Cards Grid */}
                     <div className="flex flex-wrap justify-center items-start gap-6">
                         <About></About>
+
+                        <Projects></Projects>
                     </div>
                 </div>
             </div>
