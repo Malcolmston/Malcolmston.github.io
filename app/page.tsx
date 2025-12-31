@@ -50,12 +50,30 @@ export default function Home () {
         <RadialHoverBackground>
             {/* Liquid Glass Header */}
             <Head person="Malcolm Stone" tabs={[
-                {name: "About"},
-                {name: "Projects"},
-                {name: "Skills"},
-                {name: "Contact"},
-                {name: "LinkedIn"},
-                {name: "Git"}
+                {name: "About",
+                    scrollTo: "about"
+                },
+                {name: "Projects",
+                    scrollTo: "projects",
+                    submenu: [
+                        {name: "Github", scrollTo: "github"},
+                        {name: "Gitlab", scrollTo: "gitlab"},
+                        {name: "CodePen", scrollTo: "codepen"},
+                        {name: "Local Machine", scrollTo: "local-machine"}
+                    ]},
+                {name: "Skills", scrollTo: "skills"},
+                {name: "Contact", scrollTo: "contact"},
+                {
+                    name: "LinkedIn",
+                    href: "https://www.linkedin.com/in/malcolm-stone-b22356334/"
+                },
+                {
+                    name: "Git",
+                    submenu: [
+                        {name: "GitHub", href: "https://github.com/malcolmstone"},
+                        {name: "GitLab", href: "https://gitlab.com/malcolmstone"},
+                    ]
+                }
             ]}/>
 
             {/* Main Content */}
