@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface SubMenuItem {
     name: string;
@@ -75,7 +76,16 @@ export default function Head ({person,tabs}: {person: string,tabs: Array<Tab>}) 
                         overflow-visible
                     ">
                 <div className="relative px-8 py-4 flex items-center justify-between overflow-visible">
-                    <h1 className="text-2xl font-bold text-white">{person}</h1>
+                    <div className="flex items-center gap-4">
+                        <Image
+                            src="/malcolm.png"
+                            alt={person}
+                            width={48}
+                            height={48}
+                            className="rounded-full border-2 border-white/20"
+                        />
+                        <h1 className="text-2xl font-bold text-white">{person}</h1>
+                    </div>
                     <nav className="flex gap-6 text-sm overflow-visible">
                         {
                             tabs.map((tab, index) => {
