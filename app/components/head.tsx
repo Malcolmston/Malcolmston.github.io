@@ -5,6 +5,7 @@ import { useState } from 'react';
 interface SubMenuItem {
     name: string;
     href?: string;
+    scrollTo?: string;
     onClick?: () => void;
 }
 
@@ -12,6 +13,7 @@ interface Tab {
     name: string;
     href?: string;
     onClick?: () => void;
+    scrollTo?: string;
     submenu?: Array<SubMenuItem>;
 }
 
@@ -25,6 +27,31 @@ interface Tab {
  */
 export default function Head ({person,tabs}: {person: string,tabs: Array<Tab>}) {
     const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+
+    const scrollToElement = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({behavior: "smooth", block: "start"});
+        }
+    };
+
+    const handleTabClick = (tab: Tab) => {
+        if (tab.scrollTo) {
+            scrollToElement(tab.scrollTo);
+        } else if (tab.onClick) {
+            tab.onClick();
+        }
+    };
+
+    const handleSubmenuClick = (item: SubMenuItem) => {
+        if (item.scrollTo) {
+            scrollToElement(item.scrollTo);
+            setOpenSubmenu(null); // Close submenu after click
+        } else if (item.onClick) {
+            item.onClick();
+            setOpenSubmenu(null);
+        }
+    };
 
     const handleMouseEnter = (tabName: string) => {
         setOpenSubmenu(tabName);
@@ -84,11 +111,11 @@ export default function Head ({person,tabs}: {person: string,tabs: Array<Tab>}) 
                                                               shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]
                                                               overflow-hidden">
                                                     {tab.submenu.map((item, subIndex) => {
-                                                        if (item.onClick) {
+                                                        if (item.scrollTo || item.onClick) {
                                                             return (
                                                                 <button
                                                                     key={`${item.name}-${subIndex}`}
-                                                                    onClick={item.onClick}
+                                                                    onClick={() => handleSubmenuClick(item)}
                                                                     className="w-full text-left px-4 py-3 text-white/80 hover:text-white
                                                                              hover:bg-white/10 transition-colors"
                                                                 >
@@ -116,11 +143,11 @@ export default function Head ({person,tabs}: {person: string,tabs: Array<Tab>}) 
                                 }
 
                                 // Regular tab without submenu
-                                if (tab.onClick) {
+                                if (tab.scrollTo || tab.onClick) {
                                     return (
                                         <button
                                             key={`${tab.name}-${index}`}
-                                            onClick={tab.onClick}
+                                            onClick={() => handleTabClick(tab)}
                                             className="text-white/80 hover:text-white transition-colors"
                                         >
                                             {tab.name}
