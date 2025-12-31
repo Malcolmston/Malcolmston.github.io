@@ -83,18 +83,34 @@ export default function About() {
                         <div className="space-y-4">
                             <div>
                                 <h4 className="text-sm font-semibold text-neutral-400 mb-2">Email</h4>
+
+                                <h5 className="text-sm font-semibold text-neutral-400 mb-2">Personal</h5>
+
+                                <a
+                                    href="mailto:malcolmstone11@gmail.com"
+                                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                                >
+                                    malcolmstone11@gmail.com
+                                </a>
+
+                                <h4 className="text-sm font-semibold text-neutral-400 mb-2">School</h4>
+
                                 <a
                                     href="mailto:mstone@rollins.edu"
-                                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                                    className="text-blue-500 hover:text-blue-300 transition-colors"
                                 >
                                     mstone@rollins.edu
                                 </a>
+
+
                             </div>
+
                             <div>
                                 <h4 className="text-sm font-semibold text-neutral-400 mb-2">Location</h4>
                                 <p className="text-neutral-300">Winter Park, FL</p>
                                 <p className="text-neutral-400 text-sm">Rollins College</p>
                             </div>
+
                         </div>
 
                         {/* Social Links */}
