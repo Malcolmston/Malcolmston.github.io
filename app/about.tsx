@@ -33,14 +33,18 @@ export default function About() {
                         alt="Malcolm Stone"
                         width={192}
                         height={192}
-                        className="w-48 h-48 rounded-2xl border-2 border-neutral-700 object-cover flex-shrink-0"
+                        className="w-48 h-48 rounded-2xl border-2 border-neutral-700 object-cover shrink-0"
                     />
                     <Card
                         size={Size.Medium}
                         shape={Shape.Long}
                         headerPosition={Possition.Left}
                         title="About This Portfolio"
-                        description="Welcome to my portfolio! I'm a Computer Science student at Rollins College pursuing a dual degree in Computer Science (BS) and Business Administration (MBA). This portfolio showcases my journey in technology, from full-stack development to DevOps and accessible technology solutions."
+                        description="Welcome to my portfolio!
+                        I'm a Computer Science student at Rollins College pursuing a
+                        degree in Computer Science and a Business Administration (MBA).
+                        This portfolio showcases my technical abilities, from full-stack development
+                        to DevOps and accessible technology solutions."
                     />
                 </div>
 
@@ -51,14 +55,18 @@ export default function About() {
                         shape={Shape.Rectangle}
                         headerPosition={Possition.Top}
                         title="My Focus"
-                        description="I specialize in full-stack development with a passion for creating accessible technology solutions. My work spans web applications, DevOps automation, and tools that make technology more inclusive."
+                        description="I specialize in full-stack development with a passion for
+                        creating accessible technology solutions. My work spans web applications,
+                        DevOps automation, and tools that make technology more inclusive."
                     />
                     <Card
                         size={Size.Medium}
                         shape={Shape.Rectangle}
                         headerPosition={Possition.Top}
                         title="What Drives Me"
-                        description="I'm passionate about building technology that makes a difference. From accessibility tools for learning disabilities to developer productivity applications, I focus on creating solutions that solve real problems."
+                        description="I'm passionate about building technology that makes a difference.
+                        From accessibility tools for learning disabilities to developer productivity
+                        applications, I focus on creating solutions that solve real problems."
                     />
                 </div>
 
