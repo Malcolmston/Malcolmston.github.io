@@ -28,7 +28,7 @@ interface CardProps {
  *
  * @return {JSX.Element} The rendered Card component.
  */
-export default function Card({title, description, size = Size.Medium, shape = Shape.Rectangle, headerPosition = Position.Top, icon}: CardProps): JSX.Element {
+export default function Card({title, description, size = Size.Medium, shape = Shape.Rectangle, headerPosition = Position.Top, icon}: CardProps) {
     // Size and shape based dimension classes
     const dimensionClasses = {
         square: {
