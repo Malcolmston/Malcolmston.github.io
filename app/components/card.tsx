@@ -14,6 +14,7 @@ interface CardProps {
     headerPosition?: Position;
     icon?: React.ReactNode;
     children?: React.ReactNode;
+    id?: string;
 }
 
 /**
@@ -29,7 +30,7 @@ interface CardProps {
  *
  * @return {JSX.Element} The rendered Card component.
  */
-export default function Card({title, description, size = Size.Medium, shape = Shape.Rectangle, headerPosition = Position.Top, icon, children}: CardProps) {
+export default function Card({title, description, size = Size.Medium, shape = Shape.Rectangle, headerPosition = Position.Top, icon, children, id}: CardProps) {
     // Size and shape based dimension classes
     const dimensionClasses = {
         square: {
@@ -90,7 +91,9 @@ export default function Card({title, description, size = Size.Medium, shape = Sh
         : '';
 
     return (
-        <div className={`
+        <div
+            id={id}
+            className={`
             relative rounded-3xl
             bg-neutral-900
             shadow-[8px_8px_16px_rgba(0,0,0,0.6),-8px_-8px_16px_rgba(255,255,255,0.05)]

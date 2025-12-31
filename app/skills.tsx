@@ -64,6 +64,7 @@ export default function Skills() {
             headerPosition={Position.Top}
             title="Technical Skills"
             description="A comprehensive overview of programming languages, frameworks, and tools I work with"
+            id="skills"
         >
             <div className="flex flex-col gap-8">
                 {Object.entries(categories).map(([categoryName, categorySkills]) => (
@@ -75,6 +76,7 @@ export default function Skills() {
                                     key={`${categoryName}-${index}`}
                                     size={Size.Medium}
                                     shape={Shape.Rectangle}
+                                    id={`skill-${categoryName}`}
                                 >
                                     <div className="space-y-3">
                                         <div className="flex items-center gap-3">

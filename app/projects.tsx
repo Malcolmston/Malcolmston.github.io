@@ -56,6 +56,7 @@ export default function Projects() {
             headerPosition={Position.Top}
             title="Projects"
             description="Explore my portfolio of software engineering projects across various domains"
+            id="projects"
         >
             <div className="flex flex-col gap-6">
                 {/* Search Bar */}
@@ -89,7 +90,7 @@ export default function Projects() {
                 ) : (
                     <div className="space-y-8">
                         {Object.entries(projectGroups).map(([site, projects]) => (
-                            <div key={site}>
+                            <div key={site} id={site.toLowerCase().replace(' ', '-')}>
                                 {/* Category Header */}
                                 <div className="flex items-center gap-3 mb-4">
                                     <h2 className="text-2xl font-bold">{site}</h2>
