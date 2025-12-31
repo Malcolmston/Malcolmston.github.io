@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(gh repo set-default:*)",
-      "Bash(gh api:*)"
-    ]
-  }
-}
