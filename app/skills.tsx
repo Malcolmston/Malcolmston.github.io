@@ -30,7 +30,7 @@ export default function Skills() {
             s.name.toLowerCase() === 'sql'
         ),
         'DevOps & Tools': skills.filter(s =>
-            ['git', 'docker', 'kubernetes'].includes(s.name.toLowerCase())
+            ['git', 'docker', 'kubernetes', 'metrics', 'ci/cd'].includes(s.name.toLowerCase())
         )
     };
 
@@ -50,7 +50,9 @@ export default function Skills() {
             'docker': 'bg-blue-600',
             'kubernetes': 'bg-blue-500',
             'swift': 'bg-orange-600',
-            'go': 'bg-cyan-600'
+            'go': 'bg-cyan-600',
+            'metrics': 'bg-green-600',
+            'ci/cd': 'bg-pink-600'
         };
         return colors[skillName.toLowerCase()] || 'bg-neutral-600';
     };
@@ -168,43 +170,6 @@ export default function Skills() {
                     </div>
                 ))}
 
-                {/* Summary Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t border-white/10">
-                    <Card
-                        size={Size.Medium}
-                        shape={Shape.Square}
-                        headerPosition={Position.Top}
-                        title={skills.length.toString()}
-                        description="Core Skills"
-                    />
-                    <Card
-                        size={Size.Medium}
-                        shape={Shape.Square}
-                        headerPosition={Position.Top}
-                        title={categories['Programming Languages'].length.toString()}
-                        description="Languages"
-                    />
-                    <Card
-                        size={Size.Medium}
-                        shape={Shape.Square}
-                        headerPosition={Position.Top}
-                        title={categories['DevOps & Tools'].length.toString()}
-                        description="DevOps Tools"
-                    />
-                    <Card
-                        size={Size.Medium}
-                        shape={Shape.Square}
-                        headerPosition={Position.Top}
-                        title={skillsData.reduce((acc, skill) => {
-                            return acc +
-                                (skill.frameworks?.length || 0) +
-                                (skill.tools?.length || 0) +
-                                (skill.architectures?.length || 0) +
-                                (skill.databases?.length || 0);
-                        }, 0).toString()}
-                        description="Technologies"
-                    />
-                </div>
             </div>
         </Card>
     );

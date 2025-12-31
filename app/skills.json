@@ -93,7 +93,7 @@
       "dora"
     ]
   }, {
-  "name": "ci/cd",
+  "name": "CI/CD",
   "tools": [
     "github-actions",
     "gitlab-ci"
