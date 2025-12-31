@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae09e74d-591f-45d8-88b1-7737f3385831" name="Changes" comment="chore: update workspace.xml to include Dockerfile and .dockerignore in changes and improve IDE configuration">
-      <change afterPath="$PROJECT_DIR$/resume.pdf" afterDir="false" />
+    <list default="true" id="ae09e74d-591f-45d8-88b1-7737f3385831" name="Changes" comment="chore: update Dockerfile to reorder LABEL instruction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +16,7 @@
     <execution />
   </component>
   <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="37" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -60,6 +60,7 @@
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
@@ -86,6 +87,11 @@
   </component>
   <component name="RecapUselessUpdatesCounter">
     <option name="suspendCountdown" value="9" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
@@ -195,7 +201,8 @@
       <option name="presentableId" value="Default" />
       <updated>1767107264447</updated>
       <workItem from="1767107265932" duration="1981000" />
-      <workItem from="1767208623873" duration="1029000" />
+      <workItem from="1767208623873" duration="1361000" />
+      <workItem from="1767209991273" duration="777000" />
     </task>
     <task id="LOCAL-00001" summary="chore: update IDE configuration files for cleanup and updated run configurations">
       <option name="closed" value="true" />
@@ -221,7 +228,63 @@
       <option name="project" value="LOCAL" />
       <updated>1767209440743</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: add resume PDF file">
+      <option name="closed" value="true" />
+      <created>1767209663107</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1767209663107</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: rename">
+      <option name="closed" value="true" />
+      <created>1767209879634</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1767209879634</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: deploy">
+      <option name="closed" value="true" />
+      <created>1767209968184</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1767209968184</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: add GitHub Actions workflow for Docker image build and deployment&#10;&#10;Integrates a workflow to automate Docker image building and pushing to GitHub Container Registry on `main` branch updates.">
+      <option name="closed" value="true" />
+      <created>1767210001400</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1767210001400</updated>
+    </task>
+    <task id="LOCAL-00008" summary="chore: update Next.js config to enable standalone output">
+      <option name="closed" value="true" />
+      <created>1767210006580</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1767210006580</updated>
+    </task>
+    <task id="LOCAL-00009" summary="chore: fix typo in GitHub Actions workflow name field">
+      <option name="closed" value="true" />
+      <created>1767210372857</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1767210372857</updated>
+    </task>
+    <task id="LOCAL-00010" summary="chore: update Dockerfile to reorder LABEL instruction">
+      <option name="closed" value="true" />
+      <created>1767210479541</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1767210479541</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +305,14 @@
     <MESSAGE value="chore: update IDE configuration files for cleanup and updated run configurations" />
     <MESSAGE value="feat: add Dockerfile and .dockerignore for containerized application deployment" />
     <MESSAGE value="chore: update workspace.xml to include Dockerfile and .dockerignore in changes and improve IDE configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update workspace.xml to include Dockerfile and .dockerignore in changes and improve IDE configuration" />
+    <MESSAGE value="feat: rename" />
+    <MESSAGE value="feat: add resume PDF file" />
+    <MESSAGE value="Please provide the `Diff` or relevant information about the changes made so that I can generate an appropriate commit message." />
+    <MESSAGE value="feat: deploy" />
+    <MESSAGE value="feat: add GitHub Actions workflow for Docker image build and deployment&#10;&#10;Integrates a workflow to automate Docker image building and pushing to GitHub Container Registry on `main` branch updates." />
+    <MESSAGE value="chore: update Next.js config to enable standalone output" />
+    <MESSAGE value="chore: fix typo in GitHub Actions workflow name field" />
+    <MESSAGE value="chore: update Dockerfile to reorder LABEL instruction" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update Dockerfile to reorder LABEL instruction" />
   </component>
 </project>
