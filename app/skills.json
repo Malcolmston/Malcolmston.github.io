@@ -79,7 +79,12 @@
     ]
   },
   {
-    "name": "swift"
+    "name": "swift",
+    "frameworks": [
+      "SwiftUI",
+      "Swift Package Manager",
+      "Swift UI"
+    ]
   },
   {
     "name": "go"
