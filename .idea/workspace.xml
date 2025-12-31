@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae09e74d-591f-45d8-88b1-7737f3385831" name="Changes" comment="chore: update Dockerfile to reorder LABEL instruction">
-      <change afterPath="$PROJECT_DIR$/public/malcolm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/docker-build-deploy.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/head.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/head.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+    <list default="true" id="ae09e74d-591f-45d8-88b1-7737f3385831" name="Changes" comment="refactor: simplify resume download logic in About component&#10;&#10;- Replaced fetch-based implementation with direct link creation for PDF download">
+      <change beforePath="$PROJECT_DIR$/.claude/settings.local.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/about.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,20 +80,23 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "configurable.group.appearance",
     "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/Users/malcolmstone/Downloads/Malcolmston.github.io/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecapSpentCounter">
     <option name="endsOfQuotaMs" value="1769122040436" />
-    <option name="spentUsd" value="0.0408965" />
+    <option name="spentUsd" value="0.08858625" />
   </component>
   <component name="RecapUselessUpdatesCounter">
-    <option name="suspendCountdown" value="9" />
+    <option name="suspendCountdown" value="8" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -287,7 +290,23 @@
       <option name="project" value="LOCAL" />
       <updated>1767210479541</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: replace placeholder profile photo with dynamic Image component&#10;&#10;- Imported `next/image` in about.tsx&#10;- Added profile photo using `Image` component with styling and alt text">
+      <option name="closed" value="true" />
+      <created>1767212097398</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1767212097398</updated>
+    </task>
+    <task id="LOCAL-00012" summary="refactor: simplify resume download logic in About component&#10;&#10;- Replaced fetch-based implementation with direct link creation for PDF download">
+      <option name="closed" value="true" />
+      <created>1767212131681</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1767212131681</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +335,9 @@
     <MESSAGE value="chore: update Next.js config to enable standalone output" />
     <MESSAGE value="chore: fix typo in GitHub Actions workflow name field" />
     <MESSAGE value="chore: update Dockerfile to reorder LABEL instruction" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update Dockerfile to reorder LABEL instruction" />
+    <MESSAGE value="chore: update Next.js configuration and workspace settings" />
+    <MESSAGE value="feat: replace placeholder profile photo with dynamic Image component&#10;&#10;- Imported `next/image` in about.tsx&#10;- Added profile photo using `Image` component with styling and alt text" />
+    <MESSAGE value="refactor: simplify resume download logic in About component&#10;&#10;- Replaced fetch-based implementation with direct link creation for PDF download" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: simplify resume download logic in About component&#10;&#10;- Replaced fetch-based implementation with direct link creation for PDF download" />
   </component>
 </project>
