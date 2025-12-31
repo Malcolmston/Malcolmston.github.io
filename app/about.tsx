@@ -8,15 +8,6 @@ import Image from 'next/image';
 import Position from "@/app/components/possition";
 
 export default function About() {
-    const download = () => {
-        const link = document.createElement('a');
-        link.href = '/resume.pdf';
-        link.download = 'Malcolm_Stone_Resume.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
-
     return (
         <Card
             size={Size.Large}
