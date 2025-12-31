@@ -13,7 +13,7 @@ interface Tab {
  * @return {JSX.Element} The rendered header component.
  */
 export default function Head ({person,tabs}: {person: string,tabs: Array<Tab>}) {
-    <header className="fixed top-0 left-0 right-0 z-50">
+    return <header className="fixed top-0 left-0 right-0 z-50">
         <div className="mx-auto max-w-7xl px-6 py-4">
             <div className="
                         relative overflow-hidden rounded-2xl
