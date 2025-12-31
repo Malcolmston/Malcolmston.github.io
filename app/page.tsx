@@ -37,3 +37,13 @@ function RadialHoverBackground({children}) {
         </div>
     );
 }
+
+export default function Home () {
+    return <>
+        <RadialHoverBackground>
+            <div className="relative h-screen flex items-center justify-center">
+                <h1 className="text-6xl font-bold">Hello World</h1>
+            </div>
+        </RadialHoverBackground>
+    </>
+}
