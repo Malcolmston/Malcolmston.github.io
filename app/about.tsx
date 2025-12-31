@@ -8,17 +8,12 @@ import Image from 'next/image';
 
 export default function About() {
     const download = () => {
-        fetch('/resume.pdf')
-            .then(res => res.blob())
-            .then(blob => {
-                const url = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = 'resume.pdf';
-                link.click();
-                URL.revokeObjectURL(url);
-            })
-            .catch(err => console.error(err));
+        const link = document.createElement('a');
+        link.href = '/resume.pdf';
+        link.download = 'Malcolm_Stone_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     }
 
     return (
