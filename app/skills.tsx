@@ -24,7 +24,7 @@ export default function Skills() {
             ['java', 'c', 'c++', 'c#', 'python', 'javascript', 'typescript', 'swift', 'go'].includes(s.name.toLowerCase())
         ),
         'Web Technologies': skills.filter(s =>
-            ['html', 'css'].includes(s.name.toLowerCase())
+            ['html', 'css', "php"].includes(s.name.toLowerCase())
         ),
         'Databases': skills.filter(s =>
             s.name.toLowerCase() === 'sql'
@@ -52,7 +52,8 @@ export default function Skills() {
             'swift': 'bg-orange-600',
             'go': 'bg-cyan-600',
             'metrics': 'bg-green-600',
-            'ci/cd': 'bg-pink-600'
+            'ci/cd': 'bg-pink-600',
+            'php': 'bg-purple-500'
         };
         return colors[skillName.toLowerCase()] || 'bg-neutral-600';
     };
