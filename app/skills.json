@@ -1,0 +1,87 @@
+[
+  {
+    "name": "java",
+    "architectures": [
+      "maven",
+      "spring",
+      "spring-boot",
+      "pure"
+    ]
+  },
+  {
+    "name": "c"
+  },
+  {
+    "name": "c++"
+  },
+  {
+    "name": "c#"
+  },
+  {
+    "name": "python"
+  },
+  {
+    "name": "javascript"
+  },
+  {
+    "name": "typescript"
+  },
+  {
+    "name": "html",
+    "frameworks": [
+      "bootstrap",
+      "tailwindcss",
+      "nextjs",
+      "react",
+      "vite",
+      "react-native"
+    ]
+  },
+  {
+    "name": "sql",
+    "databases": [
+      "mysql",
+      "postgresql",
+      "sqlite",
+      "redis"
+    ]
+  },
+  {
+    "name": "git",
+    "tools": [
+      "github",
+      "gitlab"
+    ]
+  },
+  {
+    "name": "docker",
+    "tools": [
+      "docker-compose",
+      "docker-hub"
+    ]
+  },
+  {
+    "name": "kubernetes",
+    "tools": [
+      "k8s",
+      "minikube",
+      "helm",
+      "digitalocean"
+    ]
+  },
+  {
+    "name": "css",
+    "frameworks": [
+      "tailwindcss",
+      "bootstrap",
+      "sass",
+      "stylus"
+    ]
+  },
+  {
+    "name": "swift"
+  },
+  {
+    "name": "go"
+  }
+]
