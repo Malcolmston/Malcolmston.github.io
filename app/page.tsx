@@ -1,6 +1,8 @@
 'use client';
 
 import { useRef } from "react";
+import Head from "@/app/components/head";
+import Card from "@/app/components/card";
 
 function RadialHoverBackground({children}) {
     const ref = useRef<HTMLDivElement>(null);
@@ -28,12 +30,15 @@ function RadialHoverBackground({children}) {
           transition-opacity duration-300
           [background:radial-gradient(900px_circle_at_var(--x)_var(--y),rgba(99,102,241,0.20),rgba(168,85,247,0.12),transparent_60%)]
         "
-            >
-                {children}
-            </div>
+            />
 
             {/* vignette */}
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_35%,rgba(0,0,0,0.9)_100%)]" />
+
+            {/* content - moved outside the radial bloom div */}
+            <div className="relative z-10">
+                {children}
+            </div>
         </div>
     );
 }
@@ -41,8 +46,26 @@ function RadialHoverBackground({children}) {
 export default function Home () {
     return <>
         <RadialHoverBackground>
-            <div className="relative h-screen flex items-center justify-center">
-                <h1 className="text-6xl font-bold">Hello World</h1>
+            {/* Liquid Glass Header */}
+            <Head person="Malcolm stone" tabs={[
+                {name: "About"},
+                {name: "Projects"},
+                {name: "Skills"},
+                {name: "Contact"},
+                {name: "LinkedIn"},
+                {name: "Git"}
+            ]}/>
+
+            {/* Main Content */}
+            <div className="relative min-h-screen flex items-center justify-center pt-32 pb-16 px-6">
+                <div className="max-w-6xl w-full">
+                    <h2 className="text-6xl font-bold text-center mb-16">Welcome</h2>
+
+                    {/* Neumorphic Cards Grid */}
+                    <div className="flex flex-wrap justify-center items-start gap-6">
+
+                    </div>
+                </div>
             </div>
         </RadialHoverBackground>
     </>
