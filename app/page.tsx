@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import Head from "@/app/components/head";
 import Card from "@/app/components/card";
+import About from "@/app/about";
 
 function RadialHoverBackground({children}) {
     const ref = useRef<HTMLDivElement>(null);
@@ -63,7 +64,7 @@ export default function Home () {
 
                     {/* Neumorphic Cards Grid */}
                     <div className="flex flex-wrap justify-center items-start gap-6">
-
+                        <About></About>
                     </div>
                 </div>
             </div>
