@@ -5,6 +5,10 @@ import Head from "@/app/components/head";
 import About from "@/app/about";
 import Projects from "@/app/projects";
 import Skills from "@/app/skills";
+import Card from "@/app/components/card";
+import Size from "@/app/components/size";
+import Shape from "@/app/components/shape";
+import Position from "@/app/components/possition";
 
 function RadialHoverBackground({children}: {children: React.ReactNode}) {
     const ref = useRef<HTMLDivElement>(null);
@@ -79,9 +83,38 @@ export default function Home () {
             {/* Main Content */}
             <div className="relative min-h-screen flex items-center justify-center pt-32 pb-16 px-6">
                 <div className="max-w-6xl w-full">
+                    <Card
+                        size={Size.Large}
+                        shape={Shape.Long}
+                        headerPosition={Position.Top}
+                        title="Full‑Stack Developer building accessible, reliable software"
+                        description="I’m Malcolm Stone — a Computer Science student who ships end‑to‑end web apps, automation, and tooling. Explore my projects, the technologies I work with, and how to reach me."
+                    >
+                        <div className="flex flex-wrap gap-3">
+                            <a
+                                href="#projects"
+                                className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 transition-colors"
+                            >
+                                View Projects
+                            </a>
+                            <a
+                                href="/resume.pdf"
+                                download="Malcolm_Stone_Resume.pdf"
+                                className="inline-flex items-center justify-center rounded-lg bg-neutral-800 px-4 py-2 text-sm font-medium text-white/90 hover:bg-neutral-700 transition-colors border border-white/10"
+                            >
+                                Download Resume
+                            </a>
+                            <a
+                                href="#contact"
+                                className="inline-flex items-center justify-center rounded-lg bg-white/10 px-4 py-2 text-sm font-medium text-white hover:bg-white/15 transition-colors border border-white/10"
+                            >
+                                Contact
+                            </a>
+                        </div>
+                    </Card>
 
                     {/* Neumorphic Cards Grid */}
-                    <div className="flex flex-wrap justify-center items-start gap-6">
+                    <div className="mt-6 flex flex-wrap justify-center items-start gap-6">
                         <About/>
 
                         <Skills/>
