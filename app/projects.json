@@ -517,5 +517,22 @@
       "HTML",
       "RStudio"
     ]
+  },
+
+  {
+    "name": "FileFinder - Cloud File Management System",
+    "description": "A comprehensive cloud-based file management platform built with PHP and MySQL, featuring multi-tier user authentication and role-based access control. Implements object-oriented PHP architecture with abstract classes for Account management, extending to Admin and Basic user types. Features include OAuth2 integration for secure authentication, granular file and folder permission controls, and a responsive Bootstrap-powered interface. Provides complete file system operations (upload, download, organize, share) with database-backed metadata storage. Demonstrates advanced PHP development patterns including inheritance, database abstraction, session management, and RESTful API design for file operations.",
+    "repo": "Local Development",
+    "site": "Local Machine",
+    "languages": [
+      "PHP",
+      "MySQL",
+      "JavaScript",
+      "Bootstrap",
+      "HTML",
+      "CSS",
+      "OAuth2",
+      "SQL"
+    ]
   }
 ]
