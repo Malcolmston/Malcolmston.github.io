@@ -83,5 +83,20 @@
   },
   {
     "name": "go"
-  }
+  },
+  {
+    "name": "metrics",
+    "tools": [
+      "loki",
+      "prometheus",
+      "grafana",
+      "dora"
+    ]
+  }, {
+  "name": "ci/cd",
+  "tools": [
+    "github-actions",
+    "gitlab-ci"
+  ]
+}
 ]
