@@ -15,7 +15,20 @@ interface CardProps {
     icon?: React.ReactNode;
 }
 
-export default function Card({title, description, size = Size.Medium, shape = Shape.Rectangle, headerPosition = Position.Top, icon}: CardProps) {
+/**
+ * Renders a customizable Card component with configurable title, description, size, shape, header position, and icon.
+ *
+ * @param {Object} props - Props object for the Card component.
+ * @param {string} props.title - The title text displayed on the card.
+ * @param {string} props.description - The description text displayed on the card.
+ * @param {string} [props.size=Size.Medium] - The size of the card. Can be "small", "medium", or "large".
+ * @param {string} [props.shape=Shape.Rectangle] - The shape of the card. Can be "square", "rectangle", or "long".
+ * @param {string} [props.headerPosition=Position.Top] - Position of the header within the card. Can be "top" or "left".
+ * @param {ReactNode} props.icon - Optional icon component to be displayed within the card.
+ *
+ * @return {JSX.Element} The rendered Card component.
+ */
+export default function Card({title, description, size = Size.Medium, shape = Shape.Rectangle, headerPosition = Position.Top, icon}: CardProps): JSX.Element {
     // Size and shape based dimension classes
     const dimensionClasses = {
         square: {
