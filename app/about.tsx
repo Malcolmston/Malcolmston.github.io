@@ -5,6 +5,7 @@ import Size from "@/app/components/size";
 import Shape from "@/app/components/shape";
 import Possition from "@/app/components/possition";
 import Image from 'next/image';
+import Position from "@/app/components/possition";
 
 export default function About() {
     const download = () => {
@@ -222,8 +223,36 @@ export default function About() {
                     description="Currently apart of the STEM Student Council; always exploring new technologies and methodologies to create better, more accessible software solutions."
                 />
 
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300" onClick={download}>Download Resume</button>
 
+                <Card
+                    size={Size.Large}
+                    shape={Shape.Long}
+                    headerPosition={Position.Top}
+                    title="Full‑Stack Developer building accessible, reliable software"
+                    description="I’m Malcolm Stone — a Computer Science student who ships end‑to‑end web apps, automation, and tooling. Explore my projects, the technologies I work with, and how to reach me."
+                >
+                    <div className="flex flex-wrap gap-3">
+                        <a
+                            href="#projects"
+                            className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 transition-colors"
+                        >
+                            View Projects
+                        </a>
+                        <a
+                            href="/resume.pdf"
+                            download="Malcolm_Stone_Resume.pdf"
+                            className="inline-flex items-center justify-center rounded-lg bg-neutral-800 px-4 py-2 text-sm font-medium text-white/90 hover:bg-neutral-700 transition-colors border border-white/10"
+                        >
+                            Download Resume
+                        </a>
+                        <a
+                            href="#contact"
+                            className="inline-flex items-center justify-center rounded-lg bg-white/10 px-4 py-2 text-sm font-medium text-white hover:bg-white/15 transition-colors border border-white/10"
+                        >
+                            Contact
+                        </a>
+                    </div>
+                </Card>
             </div>
         </Card>
     );
