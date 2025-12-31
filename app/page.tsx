@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Head from "@/app/components/head";
 import About from "@/app/about";
 import Projects from "@/app/projects";
+import Skills from "@/app/skills";
 
 function RadialHoverBackground({children}) {
     const ref = useRef<HTMLDivElement>(null);
@@ -60,13 +61,14 @@ export default function Home () {
             {/* Main Content */}
             <div className="relative min-h-screen flex items-center justify-center pt-32 pb-16 px-6">
                 <div className="max-w-6xl w-full">
-                    <h2 className="text-6xl font-bold text-center mb-16">Welcome</h2>
 
                     {/* Neumorphic Cards Grid */}
                     <div className="flex flex-wrap justify-center items-start gap-6">
-                        <About></About>
+                        <About/>
 
-                        <Projects></Projects>
+                        <Skills/>
+
+                        <Projects/>
                     </div>
                 </div>
             </div>
