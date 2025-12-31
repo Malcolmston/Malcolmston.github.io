@@ -4,6 +4,14 @@ interface Tab {
     name: string;
 }
 
+/**
+ * Renders a header component with a title and navigation tabs.
+ *
+ * @param {Object} props - The properties object.
+ * @param {string} props.person - The name of the person displayed in the header.
+ * @param {Array<Tab>} props.tabs - The list of tab objects to be rendered in the navigation.
+ * @return {JSX.Element} The rendered header component.
+ */
 export default function Head ({person,tabs}: {person: string,tabs: Array<Tab>}) {
     <header className="fixed top-0 left-0 right-0 z-50">
         <div className="mx-auto max-w-7xl px-6 py-4">
