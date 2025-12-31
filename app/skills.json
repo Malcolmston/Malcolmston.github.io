@@ -85,6 +85,9 @@
     "name": "go"
   },
   {
+    "name": "php"
+  },
+  {
     "name": "metrics",
     "tools": [
       "loki",
