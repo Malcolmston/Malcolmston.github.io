@@ -1,0 +1,521 @@
+[
+  {
+    "name": "CSha",
+    "description": "A comprehensive encryption system implemented in C, C++, and Python featuring a custom encryption algorithm built upon industry-standard ciphers (AES & SHA). The project integrates the cube biomes library for generating micro-images and custom hash generation. Demonstrates advanced cryptographic implementation and cross-language integration capabilities.",
+    "repo": "https://gitlab.com/Malcolmston/project-final",
+    "documentation": "https://filefinder.gitbook.io/csha/",
+    "site": "Gitlab",
+    "languages": [
+      "C++",
+      "Python",
+      "C",
+      "Makefile",
+      "Gitlab CI/CD",
+      "Docker",
+      "Markdown"
+    ]
+  },
+
+  {
+    "name": "URL Shortener Service",
+    "description": "A full-featured URL shortening service with database-backed link management and automated redirection. Built with Node.js and TypeScript, the application provides a RESTful API for creating, managing, and tracking shortened URLs. Implements containerization for scalable deployment.",
+    "repo": "https://github.com/Malcolmston/url-shortener",
+    "site": "Github",
+    "languages": [
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Sequelize",
+      "MySQL",
+      "Docker"
+    ]
+  },
+
+  {
+    "name": "Java Artifact Repository",
+    "description": "An enterprise-grade Node.js server designed to manage and distribute Java Maven artifacts. Provides version control, dependency management, and automated build integration through GitHub Actions. Features PostgreSQL database for artifact metadata storage and Express.js for RESTful API implementation.",
+    "repo": "https://github.com/Malcolmston/java-store",
+    "site": "Github",
+    "languages": [
+      "TypeScript",
+      "Express.js",
+      "PostgreSQL",
+      "GitHub Actions"
+    ]
+  },
+
+  {
+    "name": "Secure Chat Application",
+    "description": "A production-ready real-time chat server developed in C++ utilizing TCP socket communication for message transmission. Features comprehensive security implementation including SSL encryption, CSRF protection, OAuth2 authentication (Google and GitHub), JWT session management, and WebAuthn hardware key support. Includes a Qt-based desktop client, web interface, and comprehensive testing suite with C++ unit tests and Playwright end-to-end testing. Deployed using Docker Compose for microservice orchestration.",
+    "repo": "https://github.com/Malcolmston/chat-server",
+    "site": "Github",
+    "languages": [
+      "C++",
+      "Docker",
+      "Docker Compose",
+      "C Unit Tests",
+      "CMake",
+      "TypeScript",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "C++ Qt",
+      "Qt Creator",
+      "Playwright",
+      "Passport"
+    ],
+
+    "security": [
+      {
+        "type": "SSL/TLS",
+        "description": "Implements SSL/TLS encryption for all network traffic, ensuring secure communication between clients and server.",
+        "where": "Applied to all socket connections for encrypted message transmission and reception"
+      },
+      {
+        "type": "CSRF Protection",
+        "description": "Cross-Site Request Forgery protection middleware to prevent unauthorized command execution and maintain session integrity."
+      },
+      {
+        "type": "OAuth2",
+        "description": "OAuth2 authentication protocol implementation supporting multiple identity providers including Google and GitHub for secure user authentication.",
+        "where": "User authentication and authorization flow"
+      },
+      {
+        "type": "JWT",
+        "description": "JSON Web Token implementation for stateless authentication. Securely stores user credentials (ID and username) in HTTP-only cookies with cryptographic signing.",
+        "where": "Session management and API authentication"
+      },
+      {
+        "type": "WebAuthn",
+        "description": "Web Authentication API implementation enabling passwordless authentication through hardware security keys and biometric devices, providing FIDO2-compliant strong authentication.",
+        "where": "Multi-factor authentication and passwordless login"
+      }
+    ]
+  },
+
+  {
+    "name": "Production DevOps Pipeline",
+    "description": "A collaborative team project demonstrating modern DevOps practices and cloud-native architecture. Implements a complete CI/CD pipeline using GitLab CI/CD, Kubernetes orchestration, and containerized deployment with Docker. Features Nginx reverse proxy configuration, Redis caching layer, and comprehensive DORA metrics tracking for deployment performance monitoring. Showcases production-grade infrastructure management and automated deployment strategies.",
+    "repo": "https://gitlab.com/cms495/project-3",
+    "site": "Gitlab",
+    "languages": [
+      "Docker",
+      "Kubernetes",
+      "Nginx",
+      "Python",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redis",
+      "GitLab CI/CD",
+      "DORA Metrics"
+    ]
+  },
+
+  {
+    "name": "Collaborative Monitoring Platform",
+    "description": "A large-scale class collaboration project focused on building, testing, maintaining, and deploying a comprehensive service monitoring solution. Implements industry-standard observability tools including Prometheus for metrics collection, Grafana for visualization and alerting, and Loki for centralized log aggregation. Features automated continuous integration pipelines with GitLab CI/CD and containerized microservice architecture using Docker Compose.",
+    "repo": "https://gitlab.com/cms495/devops_final_project",
+    "site": "Gitlab",
+    "languages": [
+      "Docker",
+      "Docker Compose",
+      "Prometheus",
+      "Grafana",
+      "Loki",
+      "GitLab CI/CD",
+      "Continuous Integration"
+    ]
+  },
+
+  {
+    "name": "Dynamic Google Fonts Generator",
+    "description": "An interactive web application that dynamically generates and displays random Google Fonts with real-time preview capabilities. Built with vanilla JavaScript, HTML, and SCSS, the application demonstrates DOM manipulation, asynchronous API integration with the Google Fonts API, and responsive design principles. Features live font rendering and customizable display options.",
+    "repo": "https://codepen.io/malcolm69/pen/BaEoavv",
+    "site": "CodePen",
+    "languages": [
+      "JavaScript",
+      "HTML",
+      "SCSS",
+      "Google Fonts API"
+    ]
+  },
+
+  {
+    "name": "Interactive Graphing Calculator",
+    "description": "A feature-rich graphing calculator web application capable of plotting mathematical functions and performing complex calculations. Implements canvas-based rendering for graph visualization, mathematical expression parsing, and real-time coordinate system rendering. Built with JavaScript, HTML, and Stylus, showcasing advanced mathematical computation and interactive visualization techniques.",
+    "repo": "https://codepen.io/malcolm69/pen/OJzrLVp",
+    "site": "CodePen",
+    "languages": [
+      "JavaScript",
+      "HTML",
+      "Stylus",
+      "Canvas API"
+    ]
+  },
+
+  {
+    "name": "Generative Art Engine",
+    "description": "A creative coding project that generates unique, randomized abstract art patterns using algorithmic design principles. Leverages JavaScript canvas manipulation and procedural generation techniques to create dynamic visual compositions. Demonstrates understanding of graphics programming, randomization algorithms, and creative computational design.",
+    "repo": "https://codepen.io/malcolm69/pen/ZEyBwab",
+    "site": "CodePen",
+    "languages": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Canvas API"
+    ]
+  },
+
+  {
+    "name": "Comprehensive Geometry Calculator",
+    "description": "A versatile geometric calculation tool supporting multiple shapes with capabilities for computing area, perimeter, volume, and other dimensional properties. Features integrated unit conversion system for seamless measurement transformations. Implements modular JavaScript architecture with form validation, mathematical precision handling, and responsive UI design for educational and practical applications.",
+    "repo": "https://codepen.io/malcolm69/pen/QWvyPQV",
+    "site": "CodePen",
+    "languages": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ]
+  },
+
+  {
+    "name": "Caesar Cipher Encoder/Decoder",
+    "description": "An educational cryptography tool implementing the classic Caesar cipher (shift cipher) with an interactive cipher wheel interface. Supports bidirectional encryption and decryption with variable shift values. Demonstrates fundamental cryptographic concepts, string manipulation algorithms, and interactive UI design patterns using vanilla JavaScript.",
+    "repo": "https://codepen.io/malcolm69/pen/vYxyBZw",
+    "site": "CodePen",
+    "languages": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ]
+  },
+
+  {
+    "name": "Morse Code Translator & Audio Player",
+    "description": "A comprehensive Morse code utility featuring encoding, decoding, and audio playback functionality. Implements the International Morse Code standard with visual and auditory feedback using the Web Audio API. Supports real-time translation between text and Morse code with customizable playback speed and tone frequency, demonstrating audio programming and string parsing capabilities.",
+    "repo": "https://codepen.io/malcolm69/pen/MWbemgP",
+    "site": "CodePen",
+    "languages": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Web Audio API"
+    ]
+  },
+
+  {
+    "name": "UML Diagram Editor with AI Integration",
+    "description": "A full-stack UML diagramming application featuring AI-powered diagram generation through OpenAI ChatGPT integration. Built with a Vite-powered React frontend and Express.js backend, the application provides comprehensive UML modeling capabilities with real-time collaboration features. Implements advanced canvas manipulation with HTML2Canvas for diagram export, PostgreSQL database for persistent storage, and JWT-based authentication. The AI integration enables natural language to diagram conversion, significantly streamlining the software design process.",
+    "repo": "https://github.com/Malcolmston/uml",
+    "site": "Github",
+    "languages": [
+      "TypeScript",
+      "React",
+      "Vite",
+      "Express.js",
+      "PostgreSQL",
+      "Sequelize",
+      "OpenAI API",
+      "ChatGPT",
+      "JWT",
+      "Passport",
+      "Tailwind CSS",
+      "HTML2Canvas"
+    ]
+  },
+
+  {
+    "name": "Cloud Convert Pro",
+    "description": "An enterprise-grade file conversion service with integrated payment processing and user management. Built on Next.js 16 with React 19, the platform features Stripe payment integration for subscription management, TypeORM for robust database operations, and Iron-session for secure authentication. Provides comprehensive file format conversion capabilities with user account management, conversion history tracking, and tiered service plans. Demonstrates production-ready full-stack development with modern TypeScript practices and payment gateway integration.",
+    "repo": "https://gitlab.com/Malcolmston/cloud-convert-pro",
+    "site": "Gitlab",
+    "languages": [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "PostgreSQL",
+      "TypeORM",
+      "Stripe",
+      "Iron-session",
+      "bcrypt",
+      "Tailwind CSS"
+    ]
+  },
+
+  {
+    "name": "CodLab - Collaborative Coding Platform",
+    "description": "A real-time collaborative coding platform designed to enable multiple developers to work on the same codebase simultaneously. Implements WebSocket-based synchronization for instant code updates across all connected users, reducing server load through efficient peer communication. Features user authentication with bcrypt, MySQL database integration via Sequelize ORM, and EJS templating for dynamic content rendering. Provides a scalable solution for remote pair programming and team coding sessions.",
+    "repo": "https://github.com/Malcolmston/CodLab",
+    "site": "Github",
+    "languages": [
+      "Node.js",
+      "Express.js",
+      "WebSockets",
+      "MySQL",
+      "Sequelize",
+      "bcrypt",
+      "EJS"
+    ]
+  },
+
+  {
+    "name": "Handwrite.IO - Digital Note-Taking Platform",
+    "description": "A comprehensive digital note-taking and handwriting platform with multi-tiered account system (basic, pro, school, admin). Features OAuth2 authentication with Google, WebAuthn hardware key support for passwordless login, and text-to-speech capabilities using Google TTS. Implements QR code generation for note sharing, PostgreSQL database with Sequelize ORM, and Express-based session management. Includes file upload functionality via Multer and magic link authentication for enhanced security. Designed to support educational institutions with specialized school accounts and administrative controls.",
+    "repo": "https://github.com/Malcolmston/Handwrite.IO",
+    "site": "Github",
+    "languages": [
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Sequelize",
+      "Passport",
+      "OAuth2",
+      "WebAuthn",
+      "Google TTS",
+      "QR Codes",
+      "JWT",
+      "Multer",
+      "EJS"
+    ]
+  },
+
+  {
+    "name": "Data Science & Machine Learning Toolkit",
+    "description": "A comprehensive Python-based data science and machine learning development environment built with Poetry dependency management. Integrates industry-standard ML frameworks including PyTorch for deep learning, scikit-learn for classical ML algorithms, and Pandas/NumPy for data manipulation. Features Pinecone vector database integration for semantic search capabilities, Anthropic Claude API for AI-powered analysis, and BeautifulSoup4 for web scraping. Includes visualization tools with Matplotlib and PyGame for interactive demonstrations. Demonstrates proficiency in modern Python ML ecosystem and AI integration.",
+    "repo": "https://github.com/Malcolmston/PythonProjects",
+    "site": "Github",
+    "languages": [
+      "Python",
+      "PyTorch",
+      "scikit-learn",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Anthropic API",
+      "Pinecone",
+      "BeautifulSoup4",
+      "PyGame",
+      "Poetry"
+    ]
+  },
+
+  {
+    "name": "Asset Management Mobile Application",
+    "description": "A cross-platform mobile application built with React Native and Expo SDK 54 for comprehensive asset tracking and management. Features native navigation with React Navigation, gesture handling with React Native Gesture Handler, and smooth animations using React Native Reanimated. Implements NativeWind for Tailwind-based styling in React Native, file system access via Expo FileSystem, and haptic feedback for enhanced user experience. Demonstrates modern mobile development practices with TypeScript and supports iOS, Android, and web platforms from a single codebase.",
+    "repo": "https://github.com/Malcolmston/asset-tool",
+    "site": "Github",
+    "languages": [
+      "TypeScript",
+      "React Native",
+      "Expo",
+      "React Navigation",
+      "NativeWind",
+      "React Native Reanimated",
+      "Expo FileSystem"
+    ]
+  },
+
+  {
+    "name": "3D Interactive Portfolio",
+    "description": "An immersive 3D portfolio website built with React Three Fiber and Three.js, showcasing WebGL-powered interactive visualizations. Leverages @react-three/fiber for declarative 3D scene composition and @react-three/drei for enhanced 3D components and helpers. Creates an engaging user experience through interactive 3D elements, demonstrating advanced front-end development skills and creative use of modern web graphics technologies. Built with React 19 and comprehensive testing setup using React Testing Library.",
+    "repo": "https://github.com/Malcolmston/resume",
+    "site": "Github",
+    "languages": [
+      "TypeScript",
+      "React",
+      "Three.js",
+      "@react-three/fiber",
+      "@react-three/drei",
+      "WebGL"
+    ]
+  },
+
+  {
+    "name": "ACM Club Website",
+    "description": "The official website for the Association for Computing Machinery (ACM) student chapter at Rollins College. Built with Express.js and EJS templating, featuring SQLite3 database with Sequelize ORM for member management, event scheduling, and content administration. Provides information about club activities, upcoming events, and membership registration. Demonstrates community engagement and practical web development for student organizations.",
+    "repo": "https://github.com/Malcolmston/ACM-website",
+    "site": "Github",
+    "languages": [
+      "JavaScript",
+      "Express.js",
+      "EJS",
+      "SQLite3",
+      "Sequelize"
+    ]
+  },
+
+  {
+    "name": "UML VS Code Extension",
+    "description": "A Visual Studio Code extension that brings UML diagramming capabilities directly into the IDE workflow. Built with TypeScript and Webpack for optimized bundle size, integrating with the VS Code Extension API to provide seamless UML modeling within the editor. Enables developers to create, view, and manage UML diagrams without leaving their development environment, improving workflow efficiency for software architecture and design tasks.",
+    "repo": "https://github.com/Malcolmston/uml-vscode",
+    "site": "Github",
+    "languages": [
+      "TypeScript",
+      "VS Code Extension API",
+      "Webpack"
+    ]
+  },
+
+  {
+    "name": "TTS OCR Microservices Platform",
+    "description": "A comprehensive .NET 8.0 microservices architecture implementing Text-to-Speech and Optical Character Recognition capabilities with enterprise-grade features. Built using C# with Docker containerization and Docker Compose orchestration, the platform consists of multiple specialized services: tts_ocr (core OCR engine), tts_api (RESTful API), tts_account (user management), tts_email (notification service), tts_database (data persistence layer), tts_site (web frontend), and tts_test (testing suite). Demonstrates modern .NET development practices, microservices design patterns, and cloud-native architecture. Deployed with Heroku for production hosting.",
+    "repo": "https://gitlab.com/Malcolmston/tts-ocr",
+    "site": "Gitlab",
+    "languages": [
+      "C#",
+      ".NET 8.0",
+      "Docker",
+      "Docker Compose",
+      "Microservices",
+      "Heroku",
+      "ASP.NET Core"
+    ]
+  },
+
+  {
+    "name": "Google Docs Clone - Real-Time Collaborative Editor",
+    "description": "A full-stack real-time collaborative document editing platform inspired by Google Docs, featuring simultaneous multi-user editing with instant synchronization. Built with a React Native Expo frontend supporting iOS, Android, and web platforms, and an Express.js backend with Socket.io for WebSocket-based real-time communication. Implements JWT authentication with Passport, SQLite database with Sequelize ORM, and rate limiting for API protection. Features include live cursor tracking, conflict resolution, document versioning, and user presence indicators. Deployed with GitLab CI/CD pipeline and Docker containerization.",
+    "repo": "https://gitlab.com/Malcolmston/google-docs",
+    "site": "Gitlab",
+    "languages": [
+      "TypeScript",
+      "React Native",
+      "Expo",
+      "Express.js",
+      "Socket.io",
+      "SQLite3",
+      "Sequelize",
+      "JWT",
+      "Passport",
+      "Docker",
+      "GitLab CI/CD"
+    ]
+  },
+
+  {
+    "name": "File Saver - Cloud Storage Platform",
+    "description": "A production-grade cloud file storage and management system with real-time synchronization capabilities. Features secure file upload/download with Formidable, MIME type detection, PostgreSQL database for metadata management, and Socket.io for real-time file updates across devices. Implements bcrypt authentication, SSH2 protocol support for secure file transfers, CORS-enabled API, and UUID-based file identification. Supports multi-database architecture with both PostgreSQL and SQLite3. Deployed on Platform.sh for scalable cloud hosting with enterprise-level reliability.",
+    "repo": "https://git.us.platform.sh/zy3xo3fvavetc.git",
+    "site": "Gitlab",
+    "languages": [
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "SQLite3",
+      "Sequelize",
+      "Socket.io",
+      "SSH2",
+      "bcrypt",
+      "Formidable",
+      "Platform.sh"
+    ]
+  },
+
+  {
+    "name": "Handwrite.IO Mobile Companion",
+    "description": "A cross-platform mobile application built with React Native and Expo 53 as the companion app for the Handwrite.IO digital note-taking platform. Features native audio recording and playback with Expo AV, local SQLite database for offline note storage, image picker for photo attachments, and real-time synchronization with the web platform. Implements FontAwesome Pro icons, native drawer navigation, gesture handlers for smooth UX, and NativeWind for Tailwind-based styling. Provides seamless mobile note-taking experience with offline-first architecture and background sync capabilities.",
+    "repo": "Local Development",
+    "site": "Local Machine",
+    "languages": [
+      "TypeScript",
+      "React Native",
+      "Expo",
+      "SQLite",
+      "Expo AV",
+      "NativeWind",
+      "React Navigation",
+      "FontAwesome Pro"
+    ]
+  },
+
+  {
+    "name": ".NET SPA Web Application",
+    "description": "A modern full-stack web application built with ASP.NET Core 6.0 and Single Page Application architecture. Features TypeScript-based frontend integrated with Microsoft.AspNetCore.SpaProxy for seamless development experience. Implements hot module replacement, proxy server configuration, and automated Node.js environment setup. Demonstrates modern .NET web development practices with SPA framework integration, supporting both development and production build configurations. Showcases proficiency in C# backend development combined with modern JavaScript frontend tooling.",
+    "repo": "Local Development",
+    "site": "Local Machine",
+    "languages": [
+      "C#",
+      ".NET 6.0",
+      "ASP.NET Core",
+      "TypeScript",
+      "SPA",
+      "Node.js"
+    ]
+  },
+
+  {
+    "name": "GameSume - Developer Tools Suite",
+    "description": "A comprehensive suite of macOS native developer productivity tools built with Swift and SwiftUI. The collection includes DB Tool for database management and visualization, CodeTool for code snippet organization, DB Admin for advanced database administration, and GrandSum for data aggregation and analysis. Each tool features native macOS UI elements, optimized performance, and seamless integration with developer workflows. Built using Xcode with modern Swift concurrency and SwiftUI declarative syntax, demonstrating expertise in native macOS application development.",
+    "repo": "Local Development",
+    "site": "Local Machine",
+    "languages": [
+      "Swift",
+      "SwiftUI",
+      "Xcode",
+      "macOS",
+      "Core Data"
+    ]
+  },
+
+  {
+    "name": "Tower of Hanoi - Interactive Puzzle Game",
+    "description": "A classic Tower of Hanoi puzzle game implementation for iOS and macOS built with Swift. Features smooth animations, touch/mouse gesture controls, multiple difficulty levels, and move counter with optimal solution tracking. Implements SpriteKit for graphics rendering and game physics, providing an engaging user experience with visual feedback and progressive difficulty scaling. Includes comprehensive unit tests and UI tests using XCTest framework, demonstrating test-driven development practices in Swift.",
+    "repo": "Local Development",
+    "site": "Local Machine",
+    "languages": [
+      "Swift",
+      "SpriteKit",
+      "UIKit",
+      "XCTest",
+      "Xcode"
+    ]
+  },
+
+  {
+    "name": "Clipboard Manager - macOS Utility",
+    "description": "A powerful macOS clipboard manager application built with Swift and AppKit, providing advanced clipboard history tracking and management capabilities. Features persistent clipboard storage, quick access via keyboard shortcuts, rich text and image support, and intelligent categorization of copied content. Implements native macOS menu bar integration, dark mode support, and system-wide hotkey handling. Showcases expertise in macOS system APIs, user defaults storage, and creating polished native applications with Swift.",
+    "repo": "Local Development",
+    "site": "Local Machine",
+    "languages": [
+      "Swift",
+      "AppKit",
+      "macOS APIs",
+      "Xcode"
+    ]
+  },
+
+  {
+    "name": "Font Loader - Mobile Font Management",
+    "description": "A React Native mobile application built with Expo for managing and previewing custom fonts across iOS and Android platforms. Utilizes Expo File System for font file handling, Expo Font API for dynamic font loading, and implements FontAwesome Pro integration for rich icon support. Features font preview with customizable text samples, font family organization, and persistent storage of user preferences. Demonstrates cross-platform mobile development with native module integration and file system operations.",
+    "repo": "Local Development",
+    "site": "Local Machine",
+    "languages": [
+      "JavaScript",
+      "React Native",
+      "Expo",
+      "Expo FileSystem",
+      "Expo Font",
+      "FontAwesome Pro"
+    ]
+  },
+
+  {
+    "name": "COVID-19 Data Analysis & Visualization",
+    "description": "A comprehensive data science project analyzing COVID-19 pandemic trends using R and RMarkdown. Features interactive visualizations with ggplot2, Plotly for dynamic charts, and Leaflet for geographic mapping. Implements advanced statistical analysis including time-series forecasting, correlation analysis, and demographic breakdowns. Generates reproducible HTML reports using RMarkdown with embedded interactive graphics, demonstrating expertise in statistical computing, data visualization, and scientific communication. Processes large JSON datasets with custom R functions for data cleaning and transformation.",
+    "repo": "Local Development",
+    "site": "Local Machine",
+    "languages": [
+      "R",
+      "RMarkdown",
+      "ggplot2",
+      "Plotly",
+      "Leaflet",
+      "HTML",
+      "RStudio"
+    ]
+  }
+]
