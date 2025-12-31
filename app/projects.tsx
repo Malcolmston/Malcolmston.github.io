@@ -114,15 +114,20 @@ export default function Projects() {
                                                             {project.description}
                                                         </p>
                                                     </div>
-                                                    <a
-                                                        href={project.repo}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="shrink-0 px-4 py-2 bg-blue-600 hover:bg-blue-700
+
+                                                    { !site.toLowerCase().includes("local") ? (
+                                                        <a
+                                                            href={project.repo}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="shrink-0 px-4 py-2 bg-blue-600 hover:bg-blue-700
                                                                  rounded-lg transition-colors text-sm font-medium"
-                                                    >
-                                                        View Project →
-                                                    </a>
+                                                        >
+                                                            View Project →
+                                                        </a>
+                                                    ) : (<span className="shrink-0 px-4 py-2 bg-green-600 hover:bg-green-700
+                                                                 rounded-lg transition-colors text-sm font-medium">Currently Local →</span>)}
+
                                                 </div>
 
                                                 {/* Documentation Link */}
