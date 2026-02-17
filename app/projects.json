@@ -209,7 +209,7 @@
   {
     "name": "UML Diagram Editor with AI Integration",
     "description": "A full-stack UML diagramming application featuring AI-powered diagram generation through OpenAI ChatGPT integration. Built with a Vite-powered React frontend and Express.js backend, the application provides comprehensive UML modeling capabilities with real-time collaboration features. Implements advanced canvas manipulation with HTML2Canvas for diagram export, PostgreSQL database for persistent storage, and JWT-based authentication. The AI integration enables natural language to diagram conversion, significantly streamlining the software design process.",
-    "repo": "https://github.com/Malcolmston/uml",
+    "repo": "https://github.com/Malcolmston/uml-pro",
     "site": "Github",
     "languages": [
       "TypeScript",
@@ -217,13 +217,15 @@
       "Vite",
       "Express.js",
       "PostgreSQL",
+      "AWS superbase",
       "Sequelize",
       "OpenAI API",
       "ChatGPT",
       "JWT",
       "Passport",
       "Tailwind CSS",
-      "HTML2Canvas"
+      "HTML2Canvas",
+      "CICD"
     ]
   },
 
