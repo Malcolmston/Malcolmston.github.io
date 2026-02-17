@@ -121,7 +121,7 @@ export default function About() {
                                     <span>LinkedIn</span>
                                 </a>
                                 <a
-                                    href="https://github.com/malcolmstone"
+                                    href="https://github.com/malcolmston"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-3 text-neutral-300 hover:text-blue-400 transition-colors"
@@ -132,7 +132,7 @@ export default function About() {
                                     <span>GitHub</span>
                                 </a>
                                 <a
-                                    href="https://gitlab.com/malcolmstone"
+                                    href="https://gitlab.com/malcolmston"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-3 text-neutral-300 hover:text-blue-400 transition-colors"
