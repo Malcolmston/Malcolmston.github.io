@@ -25,14 +25,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: '24'
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --immutable
 
       - name: Build with Next.js
-        run: npm run build
+        run: yarn build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

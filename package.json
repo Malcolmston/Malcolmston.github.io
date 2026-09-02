@@ -9,10 +9,10 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "check": "npm run lint && npm run typecheck",
-    "test": "npm run test:playwright",
+    "check": "yarn lint && yarn typecheck",
+    "test": "yarn test:playwright",
     "test:playwright": "playwright test",
-    "verify": "npm run build"
+    "verify": "yarn build"
   },
   "dependencies": {
     "next": "16.3.0",
