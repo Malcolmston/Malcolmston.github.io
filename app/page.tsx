@@ -69,7 +69,7 @@ export default function Home () {
                 {name: "Contact", scrollTo: "contact"},
                 {
                     name: "LinkedIn",
-                    href: "https://www.linkedin.com/in/malcolm-stone-b22356334/"
+                    href: "https://www.linkedin.com/in/malcolm-stone/"
                 },
                 {
                     name: "Git",
