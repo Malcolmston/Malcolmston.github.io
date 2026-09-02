@@ -1,5 +1,40 @@
 [
   {
+    "name": "Vercel Deployment Portfolio",
+    "description": "A set of production and preview Vercel projects deployed under the malcolmston account, including cards, stock, go, web, docs-next, url-shortener, uml-pro, cloud-convert, and handwrites. The portfolio shows Next.js deployment experience across public apps, documentation, developer tools, and hosted product experiments.",
+    "repo": "https://vercel.com/malcolms-projects-18e573c3",
+    "documentation": "https://quiz-god.com",
+    "site": "Vercel",
+    "languages": [
+      "Next.js",
+      "React",
+      "Node.js 24",
+      "Vercel",
+      "Git Deployments",
+      "Static Export",
+      "Production Hosting"
+    ]
+  },
+
+  {
+    "name": "ts-prorm-orm",
+    "description": "A published npm package providing a TypeScript ORM for MySQL, PostgreSQL, SQLite, MSSQL, MariaDB, and related database workflows. Published under the mstone6969 npm account with MIT licensing and GitLab-backed source control.",
+    "repo": "https://www.npmjs.com/package/ts-prorm-orm",
+    "documentation": "https://gitlab.com/Malcolmston/prod-orm#readme",
+    "site": "NPM",
+    "languages": [
+      "TypeScript",
+      "ORM",
+      "MySQL",
+      "PostgreSQL",
+      "SQLite",
+      "MSSQL",
+      "MariaDB",
+      "npm Package"
+    ]
+  },
+
+  {
     "name": "Vault - Credential Management Library",
     "description": "A write-only credential vault focused on secure secret handling. Implements envelope encryption, key rotation, expiry controls, rotation policies, and an encrypted single-file store. Built in TypeScript and published as a public GitHub project.",
     "repo": "https://github.com/Malcolmston/vault",

@@ -58,6 +58,8 @@ export default function Home () {
                     submenu: [
                         {name: "Github", scrollTo: "github"},
                         {name: "Gitlab", scrollTo: "gitlab"},
+                        {name: "Vercel", scrollTo: "vercel"},
+                        {name: "NPM", scrollTo: "npm"},
                         {name: "CodePen", scrollTo: "codepen"},
                         {name: "Local Machine", scrollTo: "local-machine"}
                     ]},
