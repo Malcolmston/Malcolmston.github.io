@@ -5,7 +5,8 @@
       "maven",
       "spring",
       "spring-boot",
-      "pure"
+      "pure",
+      "PlantUML-style DSLs"
     ]
   },
   {
@@ -19,17 +20,47 @@
     "frameworks": [
       "unity",
       ".NET",
-      ".NET Core"
+      ".NET Core",
+      "ASP.NET Core"
     ]
   },
   {
-    "name": "python"
+    "name": "python",
+    "frameworks": [
+      "PyTorch",
+      "scikit-learn",
+      "Pandas",
+      "NumPy",
+      "BeautifulSoup"
+    ]
   },
   {
-    "name": "javascript"
+    "name": "javascript",
+    "frameworks": [
+      "Node.js",
+      "Express.js",
+      "Socket.IO",
+      "EJS"
+    ]
   },
   {
-    "name": "typescript"
+    "name": "typescript",
+    "frameworks": [
+      "Next.js",
+      "React",
+      "React Native",
+      "Vite",
+      "Expo"
+    ]
+  },
+  {
+    "name": "r",
+    "frameworks": [
+      "RMarkdown",
+      "ggplot2",
+      "Plotly",
+      "Leaflet"
+    ]
   },
   {
     "name": "html",
@@ -39,7 +70,9 @@
       "nextjs",
       "react",
       "vite",
-      "react-native"
+      "react-native",
+      "vue.js",
+      "pug"
     ]
   },
   {
@@ -48,7 +81,8 @@
       "mysql",
       "postgresql",
       "sqlite",
-      "redis"
+      "redis",
+      "athena"
     ]
   },
   {
@@ -71,7 +105,8 @@
       "k8s",
       "minikube",
       "helm",
-      "digitalocean"
+      "digitalocean",
+      "nginx"
     ]
   },
   {
@@ -80,7 +115,8 @@
       "tailwindcss",
       "bootstrap",
       "sass",
-      "stylus"
+      "stylus",
+      "nativewind"
     ]
   },
   {
@@ -88,14 +124,42 @@
     "frameworks": [
       "SwiftUI",
       "Swift Package Manager",
-      "Swift UI"
+      "Swift UI",
+      "AppKit",
+      "SpriteKit"
     ]
   },
   {
-    "name": "go"
+    "name": "go",
+    "frameworks": [
+      "Cobra CLI",
+      "net/http",
+      "stdlib-only packages"
+    ],
+    "tools": [
+      "passport",
+      "sequelize",
+      "jwt",
+      "jose",
+      "sqlite",
+      "redis",
+      "markdown",
+      "yaml"
+    ]
   },
   {
     "name": "php"
+  },
+  {
+    "name": "cloud",
+    "tools": [
+      "aws",
+      "terraform",
+      "vercel",
+      "heroku",
+      "platform.sh",
+      "namecheap"
+    ]
   },
   {
     "name": "metrics",
@@ -103,13 +167,16 @@
       "loki",
       "prometheus",
       "grafana",
-      "dora"
+      "dora",
+      "llm opps Phonex"
     ]
-  }, {
-  "name": "CI/CD",
-  "tools": [
-    "github-actions",
-    "gitlab-ci"
-  ]
-}
+  },
+  {
+    "name": "CI/CD",
+    "tools": [
+      "github-actions",
+      "gitlab-ci",
+      "deployment pipelines"
+    ]
+  }
 ]

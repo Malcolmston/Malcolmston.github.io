@@ -21,7 +21,7 @@ export default function Skills() {
     // Categorize skills
     const categories = {
         'Programming Languages': skills.filter(s =>
-            ['java', 'c', 'c++', 'c#', 'python', 'javascript', 'typescript', 'swift', 'go'].includes(s.name.toLowerCase())
+            ['java', 'c', 'c++', 'c#', 'python', 'javascript', 'typescript', 'swift', 'go', 'r'].includes(s.name.toLowerCase())
         ),
         'Web Technologies': skills.filter(s =>
             ['html', 'css', "php"].includes(s.name.toLowerCase())
@@ -30,7 +30,7 @@ export default function Skills() {
             s.name.toLowerCase() === 'sql'
         ),
         'DevOps & Tools': skills.filter(s =>
-            ['git', 'docker', 'kubernetes', 'metrics', 'ci/cd'].includes(s.name.toLowerCase())
+            ['git', 'docker', 'kubernetes', 'metrics', 'ci/cd', 'cloud'].includes(s.name.toLowerCase())
         )
     };
 
@@ -51,6 +51,8 @@ export default function Skills() {
             'kubernetes': 'bg-blue-500',
             'swift': 'bg-orange-600',
             'go': 'bg-cyan-600',
+            'r': 'bg-sky-600',
+            'cloud': 'bg-emerald-600',
             'metrics': 'bg-green-600',
             'ci/cd': 'bg-pink-600',
             'php': 'bg-purple-500'

@@ -1,5 +1,122 @@
 [
   {
+    "name": "Vault - Credential Management Library",
+    "description": "A write-only credential vault focused on secure secret handling. Implements envelope encryption, key rotation, expiry controls, rotation policies, and an encrypted single-file store. Built in TypeScript and published as a public GitHub project.",
+    "repo": "https://github.com/Malcolmston/vault",
+    "site": "Github",
+    "languages": [
+      "TypeScript",
+      "Encryption",
+      "Key Rotation",
+      "Credential Storage",
+      "Security"
+    ]
+  },
+
+  {
+    "name": "Go Package Suite",
+    "description": "A collection of Go packages that ports familiar JavaScript and Python developer tooling into idiomatic Go. Includes authentication, ORM, JWT, JOSE, SQLite, Redis, Markdown, YAML, recurrence rules, HTTP clients, HTML parsing, and other stdlib-focused packages.",
+    "repo": "https://github.com/Malcolmston/go",
+    "site": "Github",
+    "languages": [
+      "Go",
+      "net/http",
+      "Authentication",
+      "ORM",
+      "JWT",
+      "JOSE",
+      "SQLite",
+      "Redis",
+      "Markdown",
+      "YAML"
+    ]
+  },
+
+  {
+    "name": "WAAS - Static Site and Web Framework",
+    "description": "A Go static-site and web framework with a built-in CSS engine, font presets, and Namecheap deployment support. The project demonstrates framework design, deployment automation, and developer-oriented tooling in Go.",
+    "repo": "https://gitlab.com/Malcolmston/waas",
+    "site": "Gitlab",
+    "languages": [
+      "Go",
+      "Static Site Generation",
+      "CSS Engine",
+      "Namecheap",
+      "Deployment Automation"
+    ]
+  },
+
+  {
+    "name": "Java UML Diagram Library",
+    "description": "A Java UML diagram library with a PlantUML-like DSL parser, SVG renderer, and Docker/nginx web viewer. Built to turn structured diagram text into rendered software architecture diagrams.",
+    "repo": "https://gitlab.com/Malcolmston/java-uml-diagram",
+    "site": "Gitlab",
+    "languages": [
+      "Java",
+      "SVG",
+      "DSL Parser",
+      "Docker",
+      "Nginx",
+      "UML"
+    ]
+  },
+
+  {
+    "name": "ngrok Pipeline",
+    "description": "A Go and Cobra CLI library for building ngrok-powered CI/CD pipeline workflows. Provides command-line tooling around tunnel-backed deployment and automation flows.",
+    "repo": "https://gitlab.com/Malcolmston/ngrok-pipeline",
+    "site": "Gitlab",
+    "languages": [
+      "Go",
+      "Cobra CLI",
+      "CI/CD",
+      "ngrok",
+      "Automation"
+    ]
+  },
+
+  {
+    "name": "Feature Flag",
+    "description": "A developer tool for creating local feature-flag deployments. Built to support controlled rollouts, local experimentation, and safer deployment workflows.",
+    "repo": "https://gitlab.com/Malcolmston/feature-flag",
+    "site": "Gitlab",
+    "languages": [
+      "Feature Flags",
+      "Deployment Workflows",
+      "Developer Tools",
+      "CI/CD"
+    ]
+  },
+
+  {
+    "name": "Berry - DevOps Automation Tool",
+    "description": "A Go-based DevOps automation tool designed to centralize infrastructure and deployment configuration. Intended to reduce misconfiguration by keeping DevOps tooling managed from one synchronized location.",
+    "repo": "Local Development",
+    "site": "Local Machine",
+    "languages": [
+      "Go",
+      "DevOps",
+      "Infrastructure Automation",
+      "Configuration Management",
+      "DigitalOcean"
+    ]
+  },
+
+  {
+    "name": "Database Pro",
+    "description": "A native macOS database management application written in Swift. Designed to let developers connect to databases and edit or manage records from a desktop interface.",
+    "repo": "Local Development",
+    "site": "Local Machine",
+    "languages": [
+      "Swift",
+      "SwiftUI",
+      "macOS",
+      "Database Tools",
+      "SQL"
+    ]
+  },
+
+  {
     "name": "CSha",
     "description": "A comprehensive encryption system implemented in C, C++, and Python featuring a custom encryption algorithm built upon industry-standard ciphers (AES & SHA). The project integrates the cube biomes library for generating micro-images and custom hash generation. Demonstrates advanced cryptographic implementation and cross-language integration capabilities.",
     "repo": "https://gitlab.com/Malcolmston/project-final",
