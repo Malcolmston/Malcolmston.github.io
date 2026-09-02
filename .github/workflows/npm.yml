@@ -11,7 +11,7 @@ on:
 
 jobs:
   verify:
-    name: lint, check, verify
+    name: lint, check, verify, test
     runs-on: ubuntu-latest
 
     steps:
@@ -35,3 +35,9 @@ jobs:
 
       - name: Verify
         run: npm run verify
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Test
+        run: npm test
