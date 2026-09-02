@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Malcolm Stone",
-  description: "Software engineering portfolio for Malcolm Stone",
+  description: "Full-stack software engineering portfolio for Malcolm Stone.",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="antialiased">
         {children}
       </body>
     </html>

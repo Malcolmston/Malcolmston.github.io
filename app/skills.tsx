@@ -1,181 +1,119 @@
-'use client';
-
-import React from 'react';
-import Card from '@/app/components/card';
-import Size from '@/app/components/size';
-import Shape from '@/app/components/shape';
-import Position from '@/app/components/possition';
-import skillsData from './skills.json';
+import skillsData from "./skills.json";
 
 interface Skill {
-    name: string;
-    architectures?: string[];
-    frameworks?: string[];
-    databases?: string[];
-    tools?: string[];
+  name: string;
+  architectures?: string[];
+  frameworks?: string[];
+  databases?: string[];
+  tools?: string[];
+}
+
+const categories = [
+  {
+    name: "Programming Languages",
+    accent: "bg-sky-600",
+    names: ["java", "c", "c++", "c#", "python", "javascript", "typescript", "swift", "go", "r"],
+  },
+  {
+    name: "Web Technologies",
+    accent: "bg-rose-600",
+    names: ["html", "css", "php"],
+  },
+  {
+    name: "Data",
+    accent: "bg-amber-500",
+    names: ["sql"],
+  },
+  {
+    name: "DevOps & Platforms",
+    accent: "bg-emerald-600",
+    names: ["git", "docker", "kubernetes", "metrics", "ci/cd", "cloud"],
+  },
+];
+
+function skillDetails(skill: Skill) {
+  return [
+    ...(skill.architectures ?? []),
+    ...(skill.frameworks ?? []),
+    ...(skill.databases ?? []),
+    ...(skill.tools ?? []),
+  ];
+}
+
+function displayName(name: string) {
+  const overrides: Record<string, string> = {
+    html: "HTML",
+    css: "CSS",
+    sql: "SQL",
+    php: "PHP",
+    javascript: "JavaScript",
+    typescript: "TypeScript",
+    java: "Java",
+    go: "Go",
+    r: "R",
+  };
+
+  return overrides[name.toLowerCase()] ?? name;
 }
 
 export default function Skills() {
-    const skills = skillsData as Skill[];
+  const skills = skillsData as Skill[];
 
-    // Categorize skills
-    const categories = {
-        'Programming Languages': skills.filter(s =>
-            ['java', 'c', 'c++', 'c#', 'python', 'javascript', 'typescript', 'swift', 'go', 'r'].includes(s.name.toLowerCase())
-        ),
-        'Web Technologies': skills.filter(s =>
-            ['html', 'css', "php"].includes(s.name.toLowerCase())
-        ),
-        'Databases': skills.filter(s =>
-            s.name.toLowerCase() === 'sql'
-        ),
-        'DevOps & Tools': skills.filter(s =>
-            ['git', 'docker', 'kubernetes', 'metrics', 'ci/cd', 'cloud'].includes(s.name.toLowerCase())
-        )
-    };
+  return (
+    <section id="skills" className="border-b border-neutral-950/10 bg-stone-50">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-700">Capabilities</p>
+            <h2 className="mt-3 text-4xl font-black tracking-normal text-neutral-950">Technical Skills</h2>
+          </div>
+          <p className="max-w-xl text-sm leading-7 text-neutral-600">
+            Practical tools from shipped projects, public packages, cloud deployments, coursework, and applied AI platform work.
+          </p>
+        </div>
 
-    const getSkillColor = (skillName: string) => {
-        const colors: Record<string, string> = {
-            'java': 'bg-orange-600',
-            'c': 'bg-blue-600',
-            'c++': 'bg-blue-700',
-            'c#': 'bg-purple-600',
-            'python': 'bg-yellow-600',
-            'javascript': 'bg-yellow-500',
-            'typescript': 'bg-blue-500',
-            'html': 'bg-orange-500',
-            'css': 'bg-blue-400',
-            'sql': 'bg-gray-600',
-            'git': 'bg-red-600',
-            'docker': 'bg-blue-600',
-            'kubernetes': 'bg-blue-500',
-            'swift': 'bg-orange-600',
-            'go': 'bg-cyan-600',
-            'r': 'bg-sky-600',
-            'cloud': 'bg-emerald-600',
-            'metrics': 'bg-green-600',
-            'ci/cd': 'bg-pink-600',
-            'php': 'bg-purple-500'
-        };
-        return colors[skillName.toLowerCase()] || 'bg-neutral-600';
-    };
+        <div className="mt-8 grid gap-4 lg:grid-cols-4">
+          {categories.map((category) => {
+            const categorySkills = skills.filter((skill) => category.names.includes(skill.name.toLowerCase()));
 
-    return (
-        <Card
-            size={Size.Large}
-            shape={Shape.Long}
-            headerPosition={Position.Top}
-            title="Technical Skills"
-            description="A comprehensive overview of programming languages, frameworks, and tools I work with"
-            id="skills"
-        >
-            <div className="flex flex-col gap-8">
-                {Object.entries(categories).map(([categoryName, categorySkills]) => (
-                    <div key={categoryName}>
-                        <h3 className="text-xl font-bold mb-4 text-blue-400">{categoryName}</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            {categorySkills.map((skill, index) => (
-                                <Card
-                                    key={`${categoryName}-${index}`}
-                                    size={Size.Medium}
-                                    shape={Shape.Rectangle}
-                                    id={`skill-${categoryName}`}
-                                >
-                                    <div className="space-y-3">
-                                        <div className="flex items-center gap-3">
-                                            <div className={`w-3 h-3 rounded-full ${getSkillColor(skill.name)}`}></div>
-                                            <h4 className="text-lg font-semibold capitalize">
-                                                {skill.name}
-                                            </h4>
-                                        </div>
+            return (
+              <div key={category.name} className="rounded-lg border border-neutral-950/10 bg-white p-5 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className={`h-3 w-3 rounded-sm ${category.accent}`} />
+                  <h3 className="text-lg font-black text-neutral-950">{category.name}</h3>
+                </div>
 
-                                        {skill.architectures && (
-                                            <div>
-                                                <p className="text-xs font-semibold text-neutral-400 mb-2">
-                                                    Architectures
-                                                </p>
-                                                <div className="flex flex-wrap gap-2">
-                                                    {skill.architectures.map((arch, archIndex) => (
-                                                        <span
-                                                            key={archIndex}
-                                                            className="px-2 py-1 bg-neutral-800 border border-white/10
-                                                                     rounded-md text-xs text-neutral-300
-                                                                     hover:bg-neutral-700 transition-colors"
-                                                        >
-                                                            {arch}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
+                <div className="mt-5 grid gap-4">
+                  {categorySkills.map((skill) => {
+                    const details = skillDetails(skill);
 
-                                        {skill.frameworks && (
-                                            <div>
-                                                <p className="text-xs font-semibold text-neutral-400 mb-2">
-                                                    Frameworks
-                                                </p>
-                                                <div className="flex flex-wrap gap-2">
-                                                    {skill.frameworks.map((framework, fwIndex) => (
-                                                        <span
-                                                            key={fwIndex}
-                                                            className="px-2 py-1 bg-neutral-800 border border-white/10
-                                                                     rounded-md text-xs text-neutral-300
-                                                                     hover:bg-neutral-700 transition-colors"
-                                                        >
-                                                            {framework}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
-
-                                        {skill.databases && (
-                                            <div>
-                                                <p className="text-xs font-semibold text-neutral-400 mb-2">
-                                                    Databases
-                                                </p>
-                                                <div className="flex flex-wrap gap-2">
-                                                    {skill.databases.map((db, dbIndex) => (
-                                                        <span
-                                                            key={dbIndex}
-                                                            className="px-2 py-1 bg-neutral-800 border border-white/10
-                                                                     rounded-md text-xs text-neutral-300
-                                                                     hover:bg-neutral-700 transition-colors"
-                                                        >
-                                                            {db}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
-
-                                        {skill.tools && (
-                                            <div>
-                                                <p className="text-xs font-semibold text-neutral-400 mb-2">
-                                                    Tools
-                                                </p>
-                                                <div className="flex flex-wrap gap-2">
-                                                    {skill.tools.map((tool, toolIndex) => (
-                                                        <span
-                                                            key={toolIndex}
-                                                            className="px-2 py-1 bg-neutral-800 border border-white/10
-                                                                     rounded-md text-xs text-neutral-300
-                                                                     hover:bg-neutral-700 transition-colors"
-                                                        >
-                                                            {tool}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
-                                    </div>
-                                </Card>
-                            ))}
+                    return (
+                      <article key={skill.name} className="border-t border-neutral-950/10 pt-4 first:border-t-0 first:pt-0">
+                        <div className="flex items-center justify-between gap-3">
+                          <h4 className="text-base font-black text-neutral-950">{displayName(skill.name)}</h4>
+                          <span className="text-xs font-bold text-neutral-400">{details.length}</span>
                         </div>
-                    </div>
-                ))}
-
-            </div>
-        </Card>
-    );
+                        {details.length > 0 && (
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            {details.slice(0, 8).map((detail) => (
+                              <span
+                                key={`${skill.name}-${detail}`}
+                                className="rounded-md border border-neutral-950/10 bg-stone-50 px-2 py-1 text-xs font-semibold text-neutral-700"
+                              >
+                                {detail}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </article>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 }
