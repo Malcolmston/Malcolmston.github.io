@@ -5,10 +5,6 @@ import Head from "@/app/components/head";
 import About from "@/app/about";
 import Projects from "@/app/projects";
 import Skills from "@/app/skills";
-import Card from "@/app/components/card";
-import Size from "@/app/components/size";
-import Shape from "@/app/components/shape";
-import Position from "@/app/components/possition";
 
 function RadialHoverBackground({children}: {children: React.ReactNode}) {
     const ref = useRef<HTMLDivElement>(null);
