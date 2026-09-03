@@ -1,91 +1,250 @@
-const contactLinks = [
-  { label: "Personal", value: "malcolmstone11@gmail.com", href: "mailto:malcolmstone11@gmail.com" },
-  { label: "School", value: "mstone@rollins.edu", href: "mailto:mstone@rollins.edu" },
-  { label: "LinkedIn", value: "malcolm-stone", href: "https://www.linkedin.com/in/malcolm-stone-b22356334/" },
-  { label: "GitHub", value: "Malcolmston", href: "https://github.com/Malcolmston" },
-  { label: "GitLab", value: "Malcolmston", href: "https://gitlab.com/Malcolmston" },
-];
+'use client';
 
-const experience = [
-  {
-    role: "AI & Platform Development Intern",
-    org: "ProFound Therapeutics",
-    date: "Summer 2026",
-    body: "Built computational biology and bioinformatics tools, worked on SAGE response strategies, and gathered AI platform metrics across latency, token cost, message length, and model choice.",
-  },
-  {
-    role: "STEM Student Council",
-    org: "Rollins College",
-    date: "2026 - present",
-    body: "Works with STEM students on accessibility, student events, marketing, and community-facing technical programs.",
-  },
-  {
-    role: "ACM Chapter Board",
-    org: "Rollins Computer Science Club",
-    date: "2023 - present",
-    body: "Builds club web experiences, workshops, code challenges, and member involvement programs.",
-  },
-];
+import Card from "@/app/components/card";
+import Size from "@/app/components/size";
+import Shape from "@/app/components/shape";
+import Possition from "@/app/components/possition";
+import Image from 'next/image';
+import Position from "@/app/components/possition";
 
 export default function About() {
-  return (
-    <section id="about" className="border-b border-neutral-950/10 bg-white">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
-        <div>
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-rose-700">Profile</p>
-          <h2 className="mt-3 text-4xl font-black tracking-normal text-neutral-950">About Malcolm</h2>
-          <p className="mt-5 text-base leading-8 text-neutral-700">
-            I build software that connects product thinking with practical engineering: full-stack applications, cloud deployments, developer tools, and accessibility-focused systems for students and teams.
-          </p>
-          <div id="contact" className="mt-8 rounded-lg border border-neutral-950/10 bg-stone-50 p-5">
-            <h3 className="text-sm font-black uppercase tracking-[0.16em] text-neutral-950">Contact</h3>
-            <div className="mt-4 grid gap-3">
-              {contactLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target={link.href.startsWith("http") ? "_blank" : undefined}
-                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="group flex items-center justify-between gap-4 rounded-md border border-neutral-950/10 bg-white px-4 py-3 text-sm transition hover:border-neutral-950/40"
-                >
-                  <span className="font-bold text-neutral-500">{link.label}</span>
-                  <span className="text-right font-semibold text-neutral-950 group-hover:text-sky-700">{link.value}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="grid gap-4">
-          {experience.map((item) => (
-            <article key={`${item.role}-${item.org}`} className="rounded-lg border border-neutral-950/10 bg-stone-50 p-5">
-              <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
-                <div>
-                  <h3 className="text-xl font-black text-neutral-950">{item.role}</h3>
-                  <p className="mt-1 text-sm font-bold text-sky-800">{item.org}</p>
+    return (
+        <Card
+            size={Size.Large}
+            shape={Shape.Long}
+            headerPosition={Possition.Top}
+            title="Malcolm Stone"
+            description="Full-Stack Developer & Computer Science Student"
+            id="about"
+        >
+            <div className="flex flex-col gap-6">
+                {/* Profile Section with Image */}
+                <div className="flex flex-col md:flex-row gap-6 items-start">
+                    <Image
+                        src="/malcolm.png"
+                        alt="Malcolm Stone"
+                        width={192}
+                        height={192}
+                        className="w-48 h-48 rounded-2xl border-2 border-neutral-700 object-cover shrink-0"
+                    />
+                    <Card
+                        size={Size.Medium}
+                        shape={Shape.Long}
+                        headerPosition={Possition.Left}
+                        title="About This Portfolio"
+                        description="Welcome to my portfolio!
+                        I'm a Computer Science student at Rollins College pursuing a
+                        degree in Computer Science and a Business Administration (MBA).
+                        This portfolio showcases my technical abilities, from full-stack development
+                        to DevOps and accessible technology solutions."
+                    />
                 </div>
-                <p className="rounded-md bg-white px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-neutral-500">
-                  {item.date}
-                </p>
-              </div>
-              <p className="mt-4 max-w-3xl text-sm leading-7 text-neutral-700">{item.body}</p>
-            </article>
-          ))}
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-lg border border-neutral-950/10 bg-emerald-100 p-5">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-900">Education</p>
-              <h3 className="mt-3 text-2xl font-black text-neutral-950">Rollins College</h3>
-              <p className="mt-2 text-sm leading-6 text-neutral-700">B.S. Computer Science, expected May 2027. MBA program, expected May 2028.</p>
+                {/* Portfolio Highlights */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <Card
+                        size={Size.Medium}
+                        shape={Shape.Rectangle}
+                        headerPosition={Possition.Top}
+                        title="My Focus"
+                        description="I specialize in full-stack development with a passion for
+                        creating accessible technology solutions. My work spans web applications,
+                        DevOps automation, and tools that make technology more inclusive."
+                    />
+                    <Card
+                        size={Size.Medium}
+                        shape={Shape.Rectangle}
+                        headerPosition={Possition.Top}
+                        title="What Drives Me"
+                        description="I'm passionate about building technology that makes a difference.
+                        From accessibility tools for learning disabilities to developer productivity
+                        applications, I focus on creating solutions that solve real problems."
+                    />
+                </div>
+
+                {/* Contact Information */}
+                <Card
+                    size={Size.Medium}
+                    shape={Shape.Long}
+                    headerPosition={Possition.Top}
+                    title="Get In Touch"
+                    id="contact"
+                >
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {/* Contact Details */}
+                        <div className="space-y-4">
+                            <div>
+                                <h4 className="text-sm font-semibold text-neutral-400 mb-2">Email</h4>
+
+                                <h5 className="text-sm font-semibold text-neutral-400 mb-2">Personal</h5>
+
+                                <a
+                                    href="mailto:malcolmstone11@gmail.com"
+                                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                                >
+                                    malcolmstone11@gmail.com
+                                </a>
+
+                                <h4 className="text-sm font-semibold text-neutral-400 mb-2">School</h4>
+
+                                <a
+                                    href="mailto:mstone@rollins.edu"
+                                    className="text-blue-500 hover:text-blue-300 transition-colors"
+                                >
+                                    mstone@rollins.edu
+                                </a>
+
+
+                            </div>
+
+                            <div>
+                                <h4 className="text-sm font-semibold text-neutral-400 mb-2">Location</h4>
+                                <p className="text-neutral-300">Winter Park, FL</p>
+                                <p className="text-neutral-400 text-sm">Rollins College</p>
+                            </div>
+
+                        </div>
+
+                        {/* Social Links */}
+                        <div className="space-y-4">
+                            <h4 className="text-sm font-semibold text-neutral-400 mb-2">Connect</h4>
+                            <div className="flex flex-col gap-3">
+                                <a
+                                    href="https://www.linkedin.com/in/malcolm-stone-b22356334/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-3 text-neutral-300 hover:text-blue-400 transition-colors"
+                                >
+                                    <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                                        <span className="text-white text-sm font-bold">in</span>
+                                    </div>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a
+                                    href="https://github.com/malcolmston"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-3 text-neutral-300 hover:text-blue-400 transition-colors"
+                                >
+                                    <div className="w-8 h-8 bg-neutral-800 rounded-lg flex items-center justify-center">
+                                        <span className="text-white text-sm font-bold">GH</span>
+                                    </div>
+                                    <span>GitHub</span>
+                                </a>
+                                <a
+                                    href="https://gitlab.com/malcolmston"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-3 text-neutral-300 hover:text-blue-400 transition-colors"
+                                >
+                                    <div className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center">
+                                        <span className="text-white text-sm font-bold">GL</span>
+                                    </div>
+                                    <span>GitLab</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </Card>
+
+                {/* Quick Stats */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <Card
+                        size={Size.Medium}
+                        shape={Shape.Square}
+                        headerPosition={Possition.Top}
+                        title="10+"
+                        description="Projects Built"
+                    >
+                        <div>
+                            <ul className="list-none list-inside text-neutral-300 space-x-0.5 space-y-0.5 text-sm">
+                                <li>Web Apps</li>
+                                <li>DevOps Automation</li>
+                                <li>Tools</li>
+                                <li>Learning Resources</li>
+                                <li>Open Source Contributions</li>
+                                <li>Tutorials</li>
+                                <li>CI/CD</li>
+                            </ul>
+                        </div>
+                    </Card>
+                    <Card
+                        size={Size.Medium}
+                        shape={Shape.Square}
+                        headerPosition={Possition.Top}
+                        title="9+"
+                        description="Languages"
+
+                    >
+                        <div>
+                            <ul className="list-none list-inside text-neutral-300 space-x-0.5 space-y-0.5 text-sm">
+                                <li>JavaScript</li>
+                                <li>TypeScript</li>
+                                <li>Python</li>
+                                <li>SQL</li>
+                                <li>C#</li>
+                                <li>Java</li>
+                                <li>PHP</li>
+                                <li>Go</li>
+                            </ul>
+                        </div>
+                        </Card>
+                    <Card
+                        size={Size.Medium}
+                        shape={Shape.Square}
+                        headerPosition={Possition.Top}
+                        title="2027"
+                        description="BS Graduate"
+                    />
+                    <Card
+                        size={Size.Medium}
+                        shape={Shape.Square}
+                        headerPosition={Possition.Top}
+                        title="2029"
+                        description="MBA Graduate"
+                    />
+                </div>
+
+                {/* Current Status */}
+                <Card
+                    size={Size.Medium}
+                    shape={Shape.Long}
+                    headerPosition={Possition.Left}
+                    title="Currently"
+                    description="Currently apart of the STEM Student Council; always exploring new technologies and methodologies to create better, more accessible software solutions."
+                />
+
+
+                <Card
+                    size={Size.Large}
+                    shape={Shape.Long}
+                    headerPosition={Position.Top}
+                    title="Full‑Stack Developer building accessible, reliable software"
+                    description="I’m Malcolm Stone — a Computer Science student who ships end‑to‑end web apps, automation, and tooling. Explore my projects, the technologies I work with, and how to reach me."
+                >
+                    <div className="flex flex-wrap gap-3">
+                        <a
+                            href="#projects"
+                            className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 transition-colors"
+                        >
+                            View Projects
+                        </a>
+                        <a
+                            href="/resume.pdf"
+                            download="Malcolm_Stone_Resume.pdf"
+                            className="inline-flex items-center justify-center rounded-lg bg-neutral-800 px-4 py-2 text-sm font-medium text-white/90 hover:bg-neutral-700 transition-colors border border-white/10"
+                        >
+                            Download Resume
+                        </a>
+                        <a
+                            href="#contact"
+                            className="inline-flex items-center justify-center rounded-lg bg-white/10 px-4 py-2 text-sm font-medium text-white hover:bg-white/15 transition-colors border border-white/10"
+                        >
+                            Contact
+                        </a>
+                    </div>
+                </Card>
             </div>
-            <div className="rounded-lg border border-neutral-950/10 bg-amber-100 p-5">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-amber-900">Presentation</p>
-              <h3 className="mt-3 text-2xl font-black text-neutral-950">ATTW 2026</h3>
-              <p className="mt-2 text-sm leading-6 text-neutral-700">Presented research on using AI to mediate student-faculty email communication.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+        </Card>
+    );
 }

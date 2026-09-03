@@ -1,119 +1,163 @@
-import skillsData from "./skills.json";
+import Card from '@/app/components/card';
+import Size from '@/app/components/size';
+import Shape from '@/app/components/shape';
+import Position from '@/app/components/possition';
+import skillsData from './skills.json';
 
 interface Skill {
-  name: string;
-  architectures?: string[];
-  frameworks?: string[];
-  databases?: string[];
-  tools?: string[];
+    name: string;
+    architectures?: string[];
+    frameworks?: string[];
+    databases?: string[];
+    tools?: string[];
 }
 
-const categories = [
-  {
-    name: "Programming Languages",
-    accent: "bg-sky-600",
-    names: ["java", "c", "c++", "c#", "python", "javascript", "typescript", "swift", "go", "r"],
-  },
-  {
-    name: "Web Technologies",
-    accent: "bg-rose-600",
-    names: ["html", "css", "php"],
-  },
-  {
-    name: "Data",
-    accent: "bg-amber-500",
-    names: ["sql"],
-  },
-  {
-    name: "DevOps & Platforms",
-    accent: "bg-emerald-600",
-    names: ["git", "docker", "kubernetes", "metrics", "ci/cd", "cloud"],
-  },
+const CATEGORIES: { name: string; members: string[] }[] = [
+    {
+        name: 'Programming Languages',
+        members: ['java', 'c', 'c++', 'c#', 'python', 'javascript', 'typescript', 'swift', 'go', 'r'],
+    },
+    { name: 'Web Technologies', members: ['html', 'css', 'php'] },
+    { name: 'Databases', members: ['sql'] },
+    { name: 'DevOps & Tools', members: ['git', 'docker', 'kubernetes', 'metrics', 'ci/cd', 'cloud'] },
 ];
 
-function skillDetails(skill: Skill) {
-  return [
-    ...(skill.architectures ?? []),
-    ...(skill.frameworks ?? []),
-    ...(skill.databases ?? []),
-    ...(skill.tools ?? []),
-  ];
+// The four detail arrays render identically, so they are described as data
+// rather than repeated as four near-identical JSX blocks.
+const DETAIL_GROUPS: { label: string; key: keyof Skill }[] = [
+    { label: 'Architectures', key: 'architectures' },
+    { label: 'Frameworks', key: 'frameworks' },
+    { label: 'Databases', key: 'databases' },
+    { label: 'Tools', key: 'tools' },
+];
+
+const SKILL_COLORS: Record<string, string> = {
+    'java': 'bg-orange-600',
+    'c': 'bg-blue-600',
+    'c++': 'bg-blue-700',
+    'c#': 'bg-purple-600',
+    'python': 'bg-yellow-600',
+    'javascript': 'bg-yellow-500',
+    'typescript': 'bg-blue-500',
+    'html': 'bg-orange-500',
+    'css': 'bg-blue-400',
+    'sql': 'bg-gray-600',
+    'git': 'bg-red-600',
+    'docker': 'bg-blue-600',
+    'kubernetes': 'bg-blue-500',
+    'swift': 'bg-orange-600',
+    'go': 'bg-cyan-600',
+    'r': 'bg-sky-600',
+    'cloud': 'bg-emerald-600',
+    'metrics': 'bg-green-600',
+    'ci/cd': 'bg-pink-600',
+    'php': 'bg-purple-500',
+};
+
+// `capitalize` alone produces "Javascript" and "Ci/cd"; these need real casing.
+const DISPLAY_NAMES: Record<string, string> = {
+    'javascript': 'JavaScript',
+    'typescript': 'TypeScript',
+    'html': 'HTML',
+    'css': 'CSS',
+    'sql': 'SQL',
+    'php': 'PHP',
+    'ci/cd': 'CI/CD',
+    'c': 'C',
+    'c++': 'C++',
+    'c#': 'C#',
+    'r': 'R',
+};
+
+function skillColor(name: string) {
+    return SKILL_COLORS[name.toLowerCase()] ?? 'bg-neutral-600';
 }
 
 function displayName(name: string) {
-  const overrides: Record<string, string> = {
-    html: "HTML",
-    css: "CSS",
-    sql: "SQL",
-    php: "PHP",
-    javascript: "JavaScript",
-    typescript: "TypeScript",
-    java: "Java",
-    go: "Go",
-    r: "R",
-  };
+    const key = name.toLowerCase();
+    return DISPLAY_NAMES[key] ?? key.charAt(0).toUpperCase() + key.slice(1);
+}
 
-  return overrides[name.toLowerCase()] ?? name;
+function detailGroups(skill: Skill) {
+    return DETAIL_GROUPS.map(group => ({
+        label: group.label,
+        items: (skill[group.key] as string[] | undefined) ?? [],
+    })).filter(group => group.items.length > 0);
 }
 
 export default function Skills() {
-  const skills = skillsData as Skill[];
+    const skills = skillsData as Skill[];
 
-  return (
-    <section id="skills" className="border-b border-neutral-950/10 bg-stone-50">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-sky-700">Capabilities</p>
-            <h2 className="mt-3 text-4xl font-black tracking-normal text-neutral-950">Technical Skills</h2>
-          </div>
-          <p className="max-w-xl text-sm leading-7 text-neutral-600">
-            Practical tools from shipped projects, public packages, cloud deployments, coursework, and applied AI platform work.
-          </p>
-        </div>
-
-        <div className="mt-8 grid gap-4 lg:grid-cols-4">
-          {categories.map((category) => {
-            const categorySkills = skills.filter((skill) => category.names.includes(skill.name.toLowerCase()));
-
-            return (
-              <div key={category.name} className="rounded-lg border border-neutral-950/10 bg-white p-5 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <span className={`h-3 w-3 rounded-sm ${category.accent}`} />
-                  <h3 className="text-lg font-black text-neutral-950">{category.name}</h3>
-                </div>
-
-                <div className="mt-5 grid gap-4">
-                  {categorySkills.map((skill) => {
-                    const details = skillDetails(skill);
+    return (
+        <Card
+            size={Size.Large}
+            shape={Shape.Long}
+            headerPosition={Position.Top}
+            title="Technical Skills"
+            description="A comprehensive overview of programming languages, frameworks, and tools I work with"
+            id="skills"
+        >
+            <div className="flex flex-col gap-8">
+                {CATEGORIES.map(category => {
+                    const categorySkills = skills.filter(skill =>
+                        category.members.includes(skill.name.toLowerCase())
+                    );
 
                     return (
-                      <article key={skill.name} className="border-t border-neutral-950/10 pt-4 first:border-t-0 first:pt-0">
-                        <div className="flex items-center justify-between gap-3">
-                          <h4 className="text-base font-black text-neutral-950">{displayName(skill.name)}</h4>
-                          <span className="text-xs font-bold text-neutral-400">{details.length}</span>
+                        <div key={category.name}>
+                            <h3 className="text-xl font-bold mb-4 text-blue-400">{category.name}</h3>
+
+                            {/* Shape.Long is w-full; Shape.Rectangle locks cards to a fixed
+                                280px, which left ~320px of dead space in each grid column.
+                                items-start then stops a short card being stretched to its
+                                row's height, which had left C and C++ as empty boxes. */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+                                {categorySkills.map(skill => {
+                                    const groups = detailGroups(skill);
+
+                                    return (
+                                        <Card
+                                            key={skill.name}
+                                            size={Size.Small}
+                                            shape={Shape.Long}
+                                            id={`skill-${skill.name}`}
+                                        >
+                                            <div className="space-y-3">
+                                                <div className="flex items-center gap-3">
+                                                    <div className={`w-3 h-3 rounded-full ${skillColor(skill.name)}`}></div>
+                                                    <h4 className="text-lg font-semibold">
+                                                        {displayName(skill.name)}
+                                                    </h4>
+                                                </div>
+
+                                                {groups.map(group => (
+                                                    <div key={group.label}>
+                                                        <p className="text-xs font-semibold text-neutral-400 mb-2">
+                                                            {group.label}
+                                                        </p>
+                                                        <div className="flex flex-wrap gap-2">
+                                                            {group.items.map(item => (
+                                                                <span
+                                                                    key={item}
+                                                                    className="px-2 py-1 bg-neutral-800 border border-white/10
+                                                                             rounded-md text-xs text-neutral-300
+                                                                             hover:bg-neutral-700 transition-colors"
+                                                                >
+                                                                    {item}
+                                                                </span>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </Card>
+                                    );
+                                })}
+                            </div>
                         </div>
-                        {details.length > 0 && (
-                          <div className="mt-3 flex flex-wrap gap-2">
-                            {details.slice(0, 8).map((detail) => (
-                              <span
-                                key={`${skill.name}-${detail}`}
-                                className="rounded-md border border-neutral-950/10 bg-stone-50 px-2 py-1 text-xs font-semibold text-neutral-700"
-                              >
-                                {detail}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                      </article>
                     );
-                  })}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
+                })}
+            </div>
+        </Card>
+    );
 }
